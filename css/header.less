@@ -1,0 +1,113 @@
+@import "variables";
+
+.header{}
+.left-side, .right-side{
+  margin: 0 auto;
+}
+
+/*---------------------Top Header---------------------*/
+.info{
+  min-height: 60px;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.left-side, .right-side, .delivery, .call, .login, .basket{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delivery, .call, .login, .basket{
+  height: 100%;
+  padding:0 20px;
+  transition: 0.5s;
+  &:hover{
+    background: @orange;
+    cursor: pointer;
+  }
+}
+
+.call__img, .login__img, .basket__img, .delivery__img{
+  margin-right: 10px;
+}
+
+.left-side__language{
+  margin:0 60px;
+  color: @orange;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.left-side__search{
+  cursor: pointer;
+}
+
+/*--------------------- Nav ---------------------*/
+.header__nav{
+  position: relative;
+  padding:20px;
+  background-color: @grey;
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+  & li{
+    list-style-type: none;
+    display: flex;
+    padding:0 15px;
+    border-right: 3px solid @orange;
+    &:last-child{
+      border: none;
+    }
+    &:hover{
+
+    }
+  }
+  & a{
+    display: flex;
+    font-size: 16px;
+    color: @lightgray;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.menu__kitchens, .menu__dishes{
+  display: none;
+}
+
+#kitchen, #dish{
+  cursor: pointer;
+}
+
+.menu__kitchens, .menu__dishes{
+  display: none;
+  position: absolute;
+  top: 100%;
+  font-style: normal;
+  flex-direction: column;
+  background-color: @grey;
+  outline: 1px solid white;
+  & li{
+    color: @lightgray;
+    padding:0 20px 20px 20px;
+    cursor: pointer;
+    border-right: none;
+    &:first-child{
+      padding-top: 10px;
+    }
+  }
+}
+
+#kitchenArrow, #dishesArrow{
+  transition: 0.4s;
+}
+
+.isActive{
+  display: flex;
+}
+

@@ -1,7 +1,4 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//
-// });
+/*
+document.addEventListener("DOMContentLoaded", init);
 
-function summ(a,b){
-	return a + b;
-}
+*/

@@ -8,44 +8,41 @@
 	</head>
 	
 	<body>
-		<div class="foor-page-wrapper container">
+	<div class="food-page-wrapper">
+		<div class="container">
 			<!------------------------------------------------ HEADER ------------------------------------------------>
 			<header class="container__header header">
 				<div class="header__info info">
 					<!------------ Left Side ------------>
-					<div class="info__left-side left-side">
+					<div class="header__left-side left-side">
 						<div class="left-side__delivery delivery">
-							<div class="delivery__img"></div>
-							<div class="delivery__info"></div>
+							<img class="delivery__img" src="images/delivery.svg" width="56" height="56" alt="delivery">
+							<p class="delivery__info">Условия доставки</p>
 						</div>
-						<div class="left-side__language language">
-
-						</div>
-						<div class="left-side__search search">
-
-						</div>
+						<p class="left-side__language">UA</p>
+						<img class="left-side__search" src="images/search.svg" width="28" height="28" alt="search">
 					</div>
 					<!------------ Right Side ------------>
-					<div class="info__right-side right-side">
-						<div class="right-side__telephone telephone">
-							<div class="telephone__img"></div>
-							<div class="telephone__telephone"></div>
+					<div class="header__right-side right-side">
+						<div class="right-side__call call">
+							<img class="call__img" src="images/call.svg" width="28" height="28" alt="call">
+							<p class="call__phone">(044) 123-45-67</p>
 						</div>
 						<div class="right-side__login login">
-							<div class="login__img"></div>
-							<div class="login__login"></div>
+							<img class="login__img" src="images/login-man.png" alt="login">
+							<p class="login__login" >Войти</p>
 						</div>
 						<div class="right-side__basket basket">
-							<div class="basket__img"></div>
-							<div class="basket__basket"></div>
+							<img class="basket__img" src="images/basket.svg" width="28" height="28" alt="basket">
+							<p class="basket__basket">Корзина</p>
 						</div>
 					</div>
 				</div>
 				<!------------ Nav ------------>
-				<nav class="header__nav nav">
-					<ul id="menu">
-						<li><a class="nav__link" href="#kitchen">Кухня</a>
-							<ul>
+				<nav class="header__nav">
+					<ul class="nav" id="menu">
+						<li><a id="kitchen" class="nav__link" href="#kitchen">Кухня<img id="kitchenArrow" width="20" height="20" src="images/arrow.svg" alt="arrow"></a>
+							<ul class="menu__kitchens" id="menuKitchens">
 								<li>Все Кухни</li>
 								<li>Украинская кухня</li>
 								<li>Итальянская кухня</li>
@@ -54,8 +51,8 @@
 								<li>Американская кухня</li>
 							</ul>
 						</li>
-						<li><a class="nav__link" href="#dish">Блюда</a>
-							<ul>
+						<li id="dish"><a class="nav__link" href="#dish">Блюда<img id="dishesArrow" width="20" height="20" src="images/arrow.svg" alt="arrow"></a>
+							<ul class="menu__dishes" id="menuDishes">
 								<li>Все блюда</li>
 								<li>Пицца</li>
 								<li>Суши</li>
@@ -67,16 +64,20 @@
 						<li><a class="nav__link" href="#daysMenu">Меню по дням</a></li>
 						<li><a class="nav__link" href="#contacts">Контакты</a></li>
 					</ul>
-					<!------------ Burger Menu ------------>
+					<!-----------Burger Menu----------->
 				</nav>
 			</header>
-			<!------------------------------------------------ HEADER ------------------------------------------------>
+			<!------------------------------------------------ Content ------------------------------------------------>
 			<div class="container content">
+				<div class="content__slider slider">
 
+				</div>
 			</div>
 		</div>
+	</div>
 	</body>
 
+	<script src="js/model.js"> </script>
 	<script src="js/init.js"> </script>
 
 
