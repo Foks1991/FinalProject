@@ -57,14 +57,10 @@
   justify-content: center;
   & li{
     list-style-type: none;
-    display: flex;
     padding:0 15px;
     border-right: 3px solid @orange;
     &:last-child{
       border: none;
-    }
-    &:hover{
-
     }
   }
   & a{
@@ -76,10 +72,6 @@
   }
 }
 
-.menu__kitchens, .menu__dishes{
-  display: none;
-}
-
 #kitchen, #dish{
   cursor: pointer;
 }
@@ -88,26 +80,35 @@
   display: none;
   position: absolute;
   top: 100%;
-  font-style: normal;
   flex-direction: column;
   background-color: @grey;
-  outline: 1px solid white;
+  border-top: 1px solid @lightgray;
   & li{
     color: @lightgray;
-    padding:0 20px 20px 20px;
+    padding:15px;
     cursor: pointer;
     border-right: none;
+    justify-content: left;
     &:first-child{
-      padding-top: 10px;
+    }
+    &:hover{
+      background-color: rgba(158, 158, 163, 0.3);
     }
   }
 }
 
 #kitchenArrow, #dishesArrow{
+  justify-content: center;
   transition: 0.4s;
+  margin-left: 5px;
 }
 
 .isActive{
   display: flex;
+}
+
+.link-wrap{
+  display: flex;
+  align-items: center;
 }
 
