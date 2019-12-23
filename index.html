@@ -16,24 +16,24 @@
 					<!------------ Left Side ------------>
 					<div class="header__left-side left-side">
 						<div class="left-side__delivery delivery">
-							<img class="delivery__img" src="images/delivery.svg" width="56" height="56" alt="delivery">
+							<img class="delivery__img" src="img/delivery.svg" width="56" height="56" alt="delivery">
 							<p class="delivery__info">Условия доставки</p>
 						</div>
 						<p class="left-side__language">UA</p>
-						<img class="left-side__search" src="images/search.svg" width="28" height="28" alt="search">
+						<img class="left-side__search" src="img/search.svg" width="28" height="28" alt="search">
 					</div>
 					<!------------ Right Side ------------>
 					<div class="header__right-side right-side">
 						<div class="right-side__call call">
-							<img class="call__img" src="images/call.svg" width="28" height="28" alt="call">
+							<img class="call__img" src="img/call.svg" width="28" height="28" alt="call">
 							<p class="call__phone">(044) 123-45-67</p>
 						</div>
 						<div class="right-side__login login">
-							<img class="login__img" src="images/login-man.png" alt="login">
+							<img class="login__img" src="img/login-man.png" alt="login">
 							<p class="login__login" >Войти</p>
 						</div>
 						<div class="right-side__basket basket">
-							<img class="basket__img" src="images/basket.svg" width="28" height="28" alt="basket">
+							<img class="basket__img" src="img/basket.svg" width="28" height="28" alt="basket">
 							<p class="basket__basket">Корзина</p>
 						</div>
 					</div>
@@ -44,7 +44,7 @@
 						<li>
 							<div class="link-wrap" id="kitchen">
 								<a class="nav__link" href="#kitchen">Кухня</a>
-								<img id="kitchenArrow" width="12" height="12" src="images/arrow.svg" alt="arrow">
+								<img id="kitchenArrow" width="12" height="12" src="img/arrow.svg" alt="arrow">
 							</div>
 							<ul class="menu__kitchens" id="menuKitchens">
 								<li>Все Кухни</li>
@@ -58,7 +58,7 @@
 						<li>
 							<div class="link-wrap" id="dish">
 								<a class="nav__link" href="#dish">Блюда</a>
-								<img id="dishesArrow" width="12" height="12" src="images/arrow.svg" alt="arrow">
+								<img id="dishesArrow" width="12" height="12" src="img/arrow.svg" alt="arrow">
 							</div>
 							<ul class="menu__dishes" id="menuDishes">
 								<li>Все блюда</li>
@@ -76,17 +76,44 @@
 				</nav>
 			</header>
 			<!------------------------------------------------ Content ------------------------------------------------>
-			<div class="container content">
-				<div class="content__slider slider">
+			<div class="container__slider slider">
+				<div class="slider__item item isActiveImg">
+					<img class="item__img" src="img/slide1.jpg" alt="Первый слайд">
+					<div class="item__slideText">Заголовок слайда 1</div>
+				</div>
+
+				<div class="slider__item item">
+					<img class="item__img" src="img/slide2.jpg" alt="Второй слайд">
+					<div class="item__slideText">Заголовок слайда 2</div>
+				</div>
+
+				<div class="slider__item item">
+					<img class="item__img" src="img/slide3.jpg" alt="Третий слайд">
+					<div class="item__slideText">Заголовок слайда 3</div>
+				</div>
+
+				<!-----------Arrows----------->
+				<div class="arrows">
+					<a class="arrows__left" id="leftArrow">
+						<img class="arrows__left-left" src="img/right-arrow.svg">
+					</a>
+					<a class="arrows__right" id="rightArrow">
+						<img class="arrows__right-right" src="img/right-arrow.svg">
+					</a>
+				</div>
+				<!-----------Dots----------->
+				<div class="dots" id="dotsBlock">
 
 				</div>
 			</div>
+
 		</div>
 	</div>
 	</body>
 
 	<script src="js/model.js"> </script>
 	<script src="js/init.js"> </script>
+	<script src="js/slider.js"> </script>
 
 
 

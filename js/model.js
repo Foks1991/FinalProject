@@ -1,36 +1,27 @@
-let kitchen = document.getElementById('kitchen');
-let dish = document.getElementById('dish');
-let menuKitchens = document.getElementById('menuKitchens');
-let menuDishes = document.getElementById('menuDishes');
-let kitchenArrow = document.getElementById('kitchenArrow');
-let dishesArrow = document.getElementById('dishesArrow');
+const kitchen = document.getElementById('kitchen');
+const dish = document.getElementById('dish');
+const menuKitchens = document.getElementById('menuKitchens');
+const menuDishes = document.getElementById('menuDishes');
+const kitchenArrow = document.getElementById('kitchenArrow');
+const dishesArrow = document.getElementById('dishesArrow');
 
 kitchen.addEventListener("click", function (e) {
-    e.stopPropagation()
-    menuKitchens.classList.toggle('isActive');
-    if(menuDishes.classList.contains('isActive')){
-        menuDishes.classList.toggle('isActive');
-        dishesArrow.style.transform += 'rotate(180deg)'
-    }
-    kitchenArrow.style.transform += 'rotate(180deg)'
+    e.stopPropagation();
+    menuWorker(menuKitchens, menuDishes, dishesArrow, kitchenArrow)
 });
 
 dish.addEventListener("click", function (e) {
-    e.stopPropagation()
-    menuDishes.classList.toggle('isActive');
-    if(menuKitchens.classList.contains('isActive')){
-        menuKitchens.classList.toggle('isActive');
-        kitchenArrow.style.transform += 'rotate(180deg)'
-    }
-    dishesArrow.style.transform += 'rotate(180deg)'
+    e.stopPropagation();
+    menuWorker(menuDishes, menuKitchens, kitchenArrow, dishesArrow)
 });
 
-/*document.addEventListener("click", function () {
-
-})*/
-
-
-
-
-
+//Show current menu and hide another if shown
+function menuWorker(currentMenu, anotherMenu, anotherMenuArrow, currentMenuArrow) {
+    currentMenu.classList.toggle('isActive');
+    if(anotherMenu.classList.contains('isActive')){
+        anotherMenu.classList.toggle('isActive');
+        anotherMenuArrow.style.transform += 'rotate(180deg)';
+    }
+    currentMenuArrow.style.transform += 'rotate(180deg)';
+}
 

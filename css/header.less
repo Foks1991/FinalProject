@@ -52,6 +52,7 @@
   background-color: @grey;
 }
 
+
 .nav{
   display: flex;
   justify-content: center;
@@ -83,6 +84,7 @@
   flex-direction: column;
   background-color: @grey;
   border-top: 1px solid @lightgray;
+  z-index: 5;
   & li{
     color: @lightgray;
     padding:15px;
@@ -110,5 +112,84 @@
 .link-wrap{
   display: flex;
   align-items: center;
+}
+
+/*Slider*/
+
+
+.slider{
+  height: 400px;
+  margin-top: 20px;
+  background-color: grey;
+  position: relative;
+}
+
+.arrows{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  &__left, &__right{
+    width: 8%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    &-left, &-right{
+      position: absolute;
+      top: 50%;
+    }
+  }
+}
+
+.arrows__left-left {
+  transform:translate(0, -50%) rotate(180deg);
+}
+.arrows__right-right{
+  transform:translate(0, -50%);
+}
+
+.item{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: 1.3s;
+  &__img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.isActiveImg{
+  opacity: 1;
+}
+
+.dots{
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%, 0);
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dot{
+  width: 14px;
+  height: 14px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: @white;
+  display: block;
+  cursor: pointer;
+}
+
+.isActiveDot{
+  border: 3px solid lime;
+  background-color: @orange;
 }
 
