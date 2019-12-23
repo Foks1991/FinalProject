@@ -1,18 +1,18 @@
-const kitchen = document.getElementById('kitchen');
-const dish = document.getElementById('dish');
-const menuKitchens = document.getElementById('menuKitchens');
-const menuDishes = document.getElementById('menuDishes');
+const kitchenMenu = document.getElementById('kitchen');
+const kitchensList = document.getElementById('menuKitchens');
 const kitchenArrow = document.getElementById('kitchenArrow');
+const dishesMenu = document.getElementById('dish');
+const dishesList = document.getElementById('menuDishes');
 const dishesArrow = document.getElementById('dishesArrow');
 
-kitchen.addEventListener("click", function (e) {
+kitchenMenu.addEventListener("click", function (e) {
     e.stopPropagation();
-    menuWorker(menuKitchens, menuDishes, dishesArrow, kitchenArrow)
+    menuWorker(kitchensList, dishesList, dishesArrow, kitchenArrow)
 });
 
-dish.addEventListener("click", function (e) {
+dishesMenu.addEventListener("click", function (e) {
     e.stopPropagation();
-    menuWorker(menuDishes, menuKitchens, kitchenArrow, dishesArrow)
+    menuWorker(dishesList, kitchensList, kitchenArrow, dishesArrow)
 });
 
 //Show current menu and hide another if shown

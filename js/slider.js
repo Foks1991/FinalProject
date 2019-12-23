@@ -1,19 +1,8 @@
-const slideLeft = document.getElementById("leftArrow");
-const slideRight = document.getElementById("rightArrow");
-const sliderBlocksArray = document.getElementsByClassName('item');
-
-const dotsBlock = document.getElementById('dotsBlock');
+const leftSliderSide = document.getElementById("leftArrow");
+const rightSliderSide = document.getElementById("rightArrow");
+const slideArray = document.getElementsByClassName('item');
+const blockForDots = document.getElementById('dotsBlock');
 const dotsArray = document.getElementsByClassName('dot');
-
-createDots(sliderBlocksArray.length, dotsBlock);
-setCurrentDot(currentSlideIndex(sliderBlocksArray), dotsArray);
-
-slideLeft.addEventListener("click", function (e) {
-    leftSlide(currentSlideIndex(sliderBlocksArray), sliderBlocksArray, dotsArray);
-});
-slideRight.addEventListener("click", function (e) {
-    rightSlide(currentSlideIndex(sliderBlocksArray), sliderBlocksArray, dotsArray);
-});
 
 function currentSlideIndex (arrBlocks) {
     for (let i = 0; i < arrBlocks.length; i++) {
@@ -55,10 +44,17 @@ function createDots(slidesQuantity, dotsBlock) {
     }
 }
 
-function setCurrentDot(currentDotIndex, dotsArray) {
+function setCurrentDotStyle(currentDotIndex, dotsArray) {
     dotsArray[currentDotIndex].classList.add('isActiveDot');
 }
 
+createDots(slideArray.length, blockForDots);
+setCurrentDotStyle(currentSlideIndex(slideArray), dotsArray);
 
-
+leftSliderSide.addEventListener("click", function () {
+    leftSlide(currentSlideIndex(slideArray), slideArray, dotsArray);
+});
+rightSliderSide.addEventListener("click", function () {
+    rightSlide(currentSlideIndex(slideArray), slideArray, dotsArray);
+});
 
