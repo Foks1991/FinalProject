@@ -55,6 +55,7 @@
   position: relative;
   padding: 20px;
   background-color: #3e3e40;
+  margin: 20px 0;
 }
 .nav {
   display: flex;
@@ -75,9 +76,8 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-#kitchen,
-#dish {
-  cursor: pointer;
+#menuKitchens {
+  transition: 5s;
 }
 .menu__kitchens,
 .menu__dishes {
@@ -101,11 +101,14 @@
 .menu__dishes li:hover {
   background-color: rgba(158, 158, 163, 0.3);
 }
+#kitchen,
+#dish {
+  cursor: pointer;
+}
 #kitchenArrow,
 #dishesArrow {
-  justify-content: center;
   transition: 0.4s;
-  margin-left: 5px;
+  margin: 3px 0 0 5px;
 }
 .isActive {
   display: flex;
@@ -114,10 +117,9 @@
   display: flex;
   align-items: center;
 }
-/*Slider*/
+/*------------------------------------Slider----------------------------------*/
 .slider {
   height: 400px;
-  margin-top: 20px;
   background-color: grey;
   position: relative;
 }
@@ -161,9 +163,6 @@
   height: 100%;
   object-fit: cover;
 }
-.isActiveImg {
-  opacity: 1;
-}
 .dots {
   position: absolute;
   left: 50%;
@@ -183,10 +182,72 @@
   display: block;
   cursor: pointer;
 }
+.isActiveImg {
+  opacity: 1;
+}
 .isActiveDot {
   border: 3px solid lime;
   background-color: #FFB231;
 }
+@media (max-width: 768px) {
+  .header__nav {
+    padding: 5px;
+  }
+  .nav {
+    display: block;
+  }
+  .nav li {
+    border: none;
+  }
+  .nav li a {
+    margin: 15px auto;
+    justify-content: center;
+  }
+  #dish .nav__link,
+  #kitchen .nav__link {
+    margin-left: 15px;
+  }
+  #kitchenArrow,
+  #dishesArrow {
+    display: flex;
+  }
+  .menu__kitchens,
+  .menu__dishes {
+    position: static;
+  }
+  .menu__kitchens li,
+  .menu__dishes li {
+    margin: 0 auto;
+  }
+  .menu__kitchens li:last-child,
+  .menu__dishes li:last-child {
+    border-bottom: 1px solid orange;
+  }
+}
+/*
+.menu__kitchens, .menu__dishes{
+  display: none;
+  position: absolute;
+  top: 100%;
+  flex-direction: column;
+  background-color: @grey;
+  border-top: 1px solid @lightgray;
+  z-index: 5;
+  & li{
+    color: @lightgray;
+    padding:15px;
+    cursor: pointer;
+    border-right: none;
+    justify-content: left;
+    &:first-child{
+    }
+    &:hover{
+      background-color: rgba(158, 158, 163, 0.3);
+    }
+  }
+}
+
+*/
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf") format("truetype");

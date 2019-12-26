@@ -58,3 +58,11 @@ rightSliderSide.addEventListener("click", function () {
     rightSlide(currentSlideIndex(slideArray), slideArray, dotsArray);
 });
 
+for (let i = 0; i < dotsArray.length; i++) {
+    dotsArray[i].addEventListener('click', function () {
+        dotsArray[currentSlideIndex(slideArray)].classList.toggle('isActiveDot');
+        setCurrentDotStyle(i,dotsArray);
+        slideArray[currentSlideIndex(slideArray)].classList.toggle('isActiveImg');
+        slideArray[i].classList.toggle('isActiveImg')
+    })
+}
