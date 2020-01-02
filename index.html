@@ -2,7 +2,8 @@
 <html lang="en">
 
 	<head>
-		<link rel="stylesheet" href="css/style.css">
+		<!--<link rel="stylesheet" href="static/css/style.css">-->  <!--For Node-->
+		<link rel="stylesheet" href="src/css/style.css">
 		<meta charset="UTF-8">
 		<title>Food delivery</title>
 	</head>
@@ -16,24 +17,24 @@
 					<!------------ Left Side ------------>
 					<div class="header__left-side left-side">
 						<div class="left-side__delivery delivery">
-							<img class="delivery__img" src="img/delivery.svg" width="56" height="56" alt="delivery">
+							<img class="delivery__img" src="src/img/delivery.svg" width="56" height="56" alt="delivery">
 							<p class="delivery__info">Условия доставки</p>
 						</div>
 						<p class="left-side__language">UA</p>
-						<img class="left-side__search" src="img/search.svg" width="28" height="28" alt="search">
+						<img class="left-side__search" src="src/img/search.svg" width="28" height="28" alt="search">
 					</div>
 					<!------------ Right Side ------------>
 					<div class="header__right-side right-side">
 						<div class="right-side__call call">
-							<img class="call__img" src="img/call.svg" width="28" height="28" alt="call">
+							<img class="call__img" src="src/img/call.svg" width="28" height="28" alt="call">
 							<p class="call__phone">(044) 123-45-67</p>
 						</div>
 						<div class="right-side__login login">
-							<img class="login__img" src="img/login-man.png" alt="login">
+							<img class="login__img" src="src/img/login-man.png" alt="login">
 							<p class="login__login" >Войти</p>
 						</div>
 						<div class="right-side__basket basket">
-							<img class="basket__img" src="img/basket.svg" width="28" height="28" alt="basket">
+							<img class="basket__img" src="src/img/basket.svg" width="28" height="28" alt="basket">
 							<p class="basket__basket">Корзина</p>
 						</div>
 					</div>
@@ -44,7 +45,7 @@
 						<ul class="nav" id="menu">
 							<li id="kitchen">
 						<!--		<div class="link-wrap" id="kitchen">-->
-									<a class="nav__link" href="#kitchen">Кухня<img id="kitchenArrow" width="12" height="12" src="img/arrow.svg" alt="arrow"></a>
+									<a class="nav__link" href="#kitchen">Кухня<img id="kitchenArrow" width="12" height="12" src="src/img/arrow.svg" alt="arrow"></a>
 									<!--<img id="kitchenArrow" width="12" height="12" src="img/arrow.svg" alt="arrow">
 								</div>-->
 								<ul class="menu__kitchens" id="menuKitchens">
@@ -58,7 +59,7 @@
 							</li>
 							<li id="dish">
 						<!--		<div class="link-wrap" id="dish">-->
-									<a class="nav__link" href="#dish">Блюда<img id="dishesArrow" width="12" height="12" src="img/arrow.svg" alt="arrow"></a>
+									<a class="nav__link" href="#dish">Блюда<img id="dishesArrow" width="12" height="12" src="src/img/arrow.svg" alt="arrow"></a>
 									<!--<img id="dishesArrow" width="12" height="12" src="img/arrow.svg" alt="arrow">
 								</div>-->
 								<ul class="menu__dishes" id="menuDishes">
@@ -80,35 +81,35 @@
 			<!------------------------------------------------ Content ------------------------------------------------>
 			<div class="container__slider slider">
 				<div class="slider__item item isActiveImg">
-					<img class="item__img" src="img/slide1.jpg" alt="Первый слайд">
+					<img class="item__img" src="src/img/slide1.jpg" alt="Первый слайд">
 					<div class="item__slideText">Заголовок слайда 1</div>
 				</div>
 
 				<div class="slider__item item">
-					<img class="item__img" src="img/slide2.jpg" alt="Второй слайд">
+					<img class="item__img" src="src/img/slide2.jpg" alt="Второй слайд">
 					<div class="item__slideText">Заголовок слайда 2</div>
 				</div>
 				<div class="slider__item item">
-					<img class="item__img" src="img/slide3.jpg" alt="Второй слайд">
+					<img class="item__img" src="src/img/slide3.jpg" alt="Второй слайд">
 					<div class="item__slideText">Заголовок слайда 2</div>
 				</div>
 				<div class="slider__item item">
-					<img class="item__img" src="img/slide4.jpg" alt="Второй слайд">
+					<img class="item__img" src="src/img/slide4.jpg" alt="Второй слайд">
 					<div class="item__slideText">Заголовок слайда 2</div>
 				</div>
 
 				<div class="slider__item item">
-					<img class="item__img" src="img/slide5.jpg" alt="Третий слайд">
+					<img class="item__img" src="src/img/slide5.jpg" alt="Третий слайд">
 					<div class="item__slideText">Заголовок слайда 3</div>
 				</div>
 
 				<!-----------Arrows----------->
 				<div class="arrows">
 					<a class="arrows__left" id="leftArrow">
-						<img class="arrows__left-left" src="img/right-arrow.svg">
+						<img class="arrows__left-left" src="src/img/right-arrow.svg">
 					</a>
 					<a class="arrows__right" id="rightArrow">
-						<img class="arrows__right-right" src="img/right-arrow.svg">
+						<img class="arrows__right-right" src="src/img/right-arrow.svg">
 					</a>
 				</div>
 				<!-----------Dots----------->
@@ -121,10 +122,9 @@
 	</div>
 	</body>
 
-	<script src="js/menu.js"> </script>
-	<script src="js/init.js"> </script>
-	<script src="js/slider.js"> </script>
+	<script src="src/js/menu.js"> </script>
 
-
+	<script src="src/js/slider.js"> </script>
+	<script src="src/js/Controller.js"> </script>
 
 </html>

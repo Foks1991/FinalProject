@@ -1,0 +1,31 @@
+{
+  "name": "finalproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Foks1991/FinalProject.git"
+  },
+  "author": "Artem Palamarchuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Foks1991/FinalProject/issues"
+  },
+  "homepage": "https://github.com/Foks1991/FinalProject#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.0",
+    "path": "^0.12.7",
+    "nodemon": "^2.0.2",
+    "npm": "^6.13.4",
+    "@babel/core": "7.7.4",
+    "@babel/preset-env": "7.7.4",
+    "@babel/node": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4"
+  }
+}

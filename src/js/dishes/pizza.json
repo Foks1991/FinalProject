@@ -1,0 +1,29 @@
+[{
+    "name": "Catania",
+    "price": "215"
+}, {
+    "name": "Fiorenza",
+    "price": "195"
+}, {
+    "name": "Vegana",
+    "price": "247"
+}, {
+    "name": "Basilicata",
+    "price": "155"
+}, {
+    "name": "Tenerezza",
+    "price": "205"
+}, {
+    "name": "Margherita",
+    "price": "148"
+}, {
+    "name": "Diavola",
+    "price": "237"
+}, {
+    "name": "Bavaria",
+    "price": "205"
+}, {
+    "name": "Campania",
+    "price": "195"
+}
+]
