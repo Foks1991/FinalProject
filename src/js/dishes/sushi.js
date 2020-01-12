@@ -1,4 +1,4 @@
-[{
+export const sushi = [{
   "name": "Sea Max Set",
   "price": "389"
 }, {

@@ -1,4 +1,4 @@
-[{
+export const pizzas = [{
     "name": "Catania",
     "price": "215"
 }, {
@@ -25,5 +25,5 @@
 }, {
     "name": "Campania",
     "price": "195"
-}
-]
+}];
+

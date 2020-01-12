@@ -2,9 +2,11 @@
   "name": "finalproject",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon --exec babel-node index.js"
+    "build": "webpack --config webpack.config.js",
+    "build-watch": "webpack --watch --config webpack.config.js",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,8 @@
     "@babel/core": "7.7.4",
     "@babel/preset-env": "7.7.4",
     "@babel/node": "^7.7.7",
-    "@babel/plugin-proposal-class-properties": "^7.7.4"
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }
