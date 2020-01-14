@@ -1,0 +1,68 @@
+@import "variables";
+
+.dishesKitchens{
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:20px;
+  width: 360px;
+  border-radius: 10px;
+  background-color: @white;
+  border: 1px solid grey;
+  transition: 0.5s;
+  color: black;
+  &:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  &__img{
+    margin-top: 20px;
+    width: 80%;
+    height: 300px;
+    background-size: 100% 100%;
+    border: none;
+    transition: 0.5s;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+  &__name{
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  &__price{
+    margin-top: 20px;
+    font-size: 28px;
+    color: black;
+    font-weight: bold;
+  }
+  &__toBasket{
+    width: 150px;
+    height: 45px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: @white;
+    background-color: @orange;
+    border-radius: 6px;
+    border: 1px solid @orange;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover{
+      background-color: darkorange;
+    }
+    &:focus{
+      outline: none;
+      border: none;
+    }
+  }
+}

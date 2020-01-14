@@ -172,7 +172,7 @@
 .dots{
   position: absolute;
   left: 50%;
-  bottom: 30px;
+  bottom: -40px;
   transform: translate(-50%, 0);
   height: 30px;
   display: flex;
@@ -185,7 +185,7 @@
   height: 14px;
   margin: 0 5px;
   border-radius: 50%;
-  background-color: @white;
+  border: 1px solid darkgray;
   display: block;
   cursor: pointer;
 }
@@ -196,7 +196,6 @@
 }
 
 .isActiveDot{
-  border: 3px solid lime;
   background-color: @orange;
 }
 
@@ -231,28 +230,3 @@
     }
   }
 }
-
-/*
-.menu__kitchens, .menu__dishes{
-  display: none;
-  position: absolute;
-  top: 100%;
-  flex-direction: column;
-  background-color: @grey;
-  border-top: 1px solid @lightgray;
-  z-index: 5;
-  & li{
-    color: @lightgray;
-    padding:15px;
-    cursor: pointer;
-    border-right: none;
-    justify-content: left;
-    &:first-child{
-    }
-    &:hover{
-      background-color: rgba(158, 158, 163, 0.3);
-    }
-  }
-}
-
-*/

@@ -10,7 +10,7 @@
 	
 	<body>
 	<div class="food-page-wrapper">
-		<div class="container">
+		<div class="container" id="container">
 			<!------------------------------------------------ HEADER ------------------------------------------------>
 			<header class="container__header header">
 				<div class="header__info info">
@@ -44,10 +44,7 @@
 					<nav class="header__nav">
 						<ul class="nav" id="menu">
 							<li id="kitchen">
-						<!--		<div class="link-wrap" id="kitchen">-->
-									<a class="nav__link" href="#kitchen">Кухня<img id="kitchenArrow" width="12" height="12" src="src/img/arrow.svg" alt="arrow"></a>
-									<!--<img id="kitchenArrow" width="12" height="12" src="img/arrow.svg" alt="arrow">
-								</div>-->
+								<a class="nav__link" >Кухня<img id="kitchenArrow" width="12" height="12" src="src/img/arrow.svg" alt="arrow"></a>
 								<ul class="menu__kitchens" id="menuKitchens">
 									<li>Все Кухни</li>
 									<li>Украинская кухня</li>
@@ -58,16 +55,13 @@
 								</ul>
 							</li>
 							<li id="dish">
-						<!--		<div class="link-wrap" id="dish">-->
-									<a class="nav__link" href="#dish">Блюда<img id="dishesArrow" width="12" height="12" src="src/img/arrow.svg" alt="arrow"></a>
-									<!--<img id="dishesArrow" width="12" height="12" src="img/arrow.svg" alt="arrow">
-								</div>-->
+								<a class="nav__link" >Блюда<img id="dishesArrow" width="12" height="12" src="src/img/arrow.svg" alt="arrow"></a>
 								<ul class="menu__dishes" id="menuDishes">
-									<li>Все блюда</li>
-									<li>Пицца</li>
-									<li>Суши</li>
-									<li>Шашлык</li>
-									<li>Хачапури</li>
+									<li id="allDishes">Все блюда</li>
+									<li id="pizzas">Пицца</li>
+									<li id="sushi">Суши</li>
+									<li id="barbecue">Шашлык</li>
+									<li id="khachapuri">Хачапури</li>
 								</ul>
 							</li>
 							<li><a class="nav__link" href="#setLunch">Комплексный обед</a></li>
@@ -113,27 +107,19 @@
 					</a>
 				</div>
 				<!-----------Dots----------->
-				<div class="dots" id="dotsBlock">
-
-				</div>
+				<div class="dots" id="dotsBlock"></div>
+				<!----------- Dishes/Kitchens ----------->
 			</div>
 
+			<div class="dishesKitchens" id="dishesKitchens"></div>
+			<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18515.883221845408!2d33.619987123653885
+				!3d34.87691028131435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e09cd1f0091123%3A0xca7e01752
+				40362cc!2zzqDOrM-BzrrOvyDOpM61zrrOus6tLCDQmtGW0L_RgA!5e0!3m2!1suk!2sua!4v1579007988039!5m2!1suk!2sua"
+				width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
+			</iframe>-->
 		</div>
 	</div>
 	</body>
 
-	<!--<script src="src/js/controller.js"> </script>
-	<script src="src/js/controller.js"> </script>
-
-	<script src="src/js/model.js"> </script>
-	<script src="src/js/controller.js"> </script>
-	<script src="src/js/view.js"> </script>
-
-	<script type="module" src="src/js/init.js"> </script>-->
-
-
-
-	<!--<script type="module" src="src/js/controller.js"> </script>-->
 	<script src="build/bundle.js"></script>
-	<!--<script src="src/js/slider/controller.js"></script>-->
 </html>
