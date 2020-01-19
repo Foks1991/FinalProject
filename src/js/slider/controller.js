@@ -1,48 +1,28 @@
 import model from "./model";
+import view from "./view";
 
-export default {
-    currentSlideIndex : (arrBlocks) => {
-        for (let i = 0; i < arrBlocks.length; i++) {
-            if(arrBlocks[i].classList.contains('isActiveImg')){
-                return i;
-            }
+export const viewSlider = () =>{
+
+    view.createDots(model.slideArray.length, model.blockForDots);
+
+    view.setCurrentDotStyle(view.currentSlideIndex(model.slideArray), model.dotsArray);
+
+    model.leftSliderSide.addEventListener("click", function () {
+        view.leftSlide(view.currentSlideIndex(model.slideArray), model.slideArray, model.dotsArray);
+    });
+    model.rightSliderSide.addEventListener("click", function () {
+        view.rightSlide(view.currentSlideIndex(model.slideArray), model.slideArray, model.dotsArray);
+    });
+
+    const toggleSlides = (dotsArray, slideArray) => {
+        for (let i = 0; i < dotsArray.length; i++)  {
+            dotsArray[i].addEventListener('click', function () {
+                dotsArray[view.currentSlideIndex(slideArray)].classList.toggle('isActiveDot');
+                view.setCurrentDotStyle(i, dotsArray);
+                slideArray[view.currentSlideIndex(slideArray)].classList.toggle('isActiveImg');
+                slideArray[i].classList.toggle('isActiveImg')
+            })
         }
-    },
-
-    leftSlide : (currentSlideIndex, sliderBlocks, dotsArray) => {
-        sliderBlocks[currentSlideIndex].classList.toggle('isActiveImg');
-        dotsArray[currentSlideIndex].classList.toggle('isActiveDot');
-        if(currentSlideIndex === 0){
-            sliderBlocks[sliderBlocks.length - 1].classList.toggle('isActiveImg');
-            dotsArray[sliderBlocks.length - 1].classList.toggle('isActiveDot');
-        }else{
-            sliderBlocks[currentSlideIndex-1].classList.toggle('isActiveImg');
-            dotsArray[currentSlideIndex-1].classList.toggle('isActiveDot');
-        }
-    },
-
-    rightSlide : (currentSlideIndex, sliderBlocks, dotsArray) => {
-        sliderBlocks[currentSlideIndex].classList.toggle('isActiveImg');
-        dotsArray[currentSlideIndex].classList.toggle('isActiveDot');
-        if(currentSlideIndex === sliderBlocks.length - 1){
-            sliderBlocks[0].classList.toggle('isActiveImg');
-            dotsArray[0].classList.toggle('isActiveDot');
-        }else{
-            sliderBlocks[currentSlideIndex+1].classList.toggle('isActiveImg');
-            dotsArray[currentSlideIndex+1].classList.toggle('isActiveDot');
-        }
-    },
-
-    createDots : (slidesQuantity, dotsBlock) => {
-        for (let i = 0; i < slidesQuantity; i++) {
-            const elem = document.createElement('span');
-            elem.setAttribute('class','dot');
-            dotsBlock.appendChild(elem);
-        }
-    },
-
-    setCurrentDotStyle : (currentDotIndex, dotsArray) => {
-        dotsArray[currentDotIndex].classList.add('isActiveDot');
-    },
-
+    };
+    toggleSlides(model.dotsArray, model.slideArray);
 };

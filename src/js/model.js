@@ -4,13 +4,13 @@ class Model {
         this.dishesObj = {}
     }
 
-    addDishToObj(obj, key, value) {
+    addDish(obj, key, value) {
         obj[key] = value;
     }
-    getDishesObj (){
+    getDishes (){
         return this.dishesObj;
     }
-    clearDishesObj () {
+    clearDishes () {
         for (let key in this.dishesObj) {
             if (this.dishesObj.hasOwnProperty(key)) {
                 delete this.dishesObj[key]
@@ -18,17 +18,6 @@ class Model {
         }
     }
 
-    /*addDishes (){
-        for (let i = 0; i < arguments.length; i++) {
-            this.dishes.push(arguments[i]);
-        }
-    }
-    getDishes (){
-        return this.dishes;
-    }
-    clearDishes () {
-        this.dishes = [];
-    }*/
 }
 
 export default Model;

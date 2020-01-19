@@ -10,26 +10,98 @@
 	
 	<body>
 	<div class="food-page-wrapper">
+
+		<div class="overlay" id="overlay"></div>
+		<!------------------------------------------------ Modals ------------------------------------------------>
+		<div class="modal__wrap" id="modal__wrap">
+			<!------------------------------------------------ Delivery ------------------------------------------------>
+			<div class="deliver" id="deliver">
+				<img class="deliver__close" id="deliver__close" src="src/img/delivery/close.svg" alt="close">
+				<h2 class="deliver__head">Условия доставки</h2>
+
+				<div class="deliver__free helper">
+					<img class="deliver__img" src="src/img/delivery/free.svg" alt="free">
+					<p class="">Безплатно</p>
+				</div>
+				<p class="deliver__min">Минимальная сумма заказа: 150 грн</p>
+
+				<div class="deliver__time helper">
+					<img class="deliver__img" src="src/img/delivery/clock.svg" alt="free">
+					<p class="">Доставка на протяжении 1 часа:</p>
+				</div>
+				<p class="deliver__min">
+					11:00-22:00 - пн-чт, нд
+					11:00-23:00 - пт-сб
+				</p>
+
+				<div class="deliver__how helper">
+					<img class="deliver__img" src="src/img/delivery/know-how.svg" alt="free">
+					<p class="">Как заказать?</p>
+				</div>
+				<p class="deliver__min">Заказывайте на сайте</p>
+				<p class="deliver__min">Для заказа - обратитесь к оператору:</p>
+				<ul class="deliver__list">
+					<li><a href="tel:(044) 444 44 44">(044) 444-44-44</a></li>
+					<li><a href="tel:(067) 444 44 44">(067) 444-44-44</a></li>
+					<li><a href="tel:(099) 444 44 44">(099) 444-44-44</a></li>
+					<li><a href="tel:(073) 444 44 44">(073) 444 44 44</a></li>
+				</ul>
+			</div>
+			<!------------------------------------------------ CallBack ------------------------------------------------>
+			<div class="callback" id="callback">
+				<img class="callback__close" id="callback__close" src="src/img/delivery/close.svg" alt="close">
+				<h2 class="callback__head">Мы на связи</h2>
+				<input type="text" maxlength="20" placeholder="Ваше Имя" class="callback__name">
+				<input type="text" maxlength="20" placeholder="Номер телефона" class="callback__phone">
+				<textarea placeholder="Комментарий" cols="30" rows="10" class="callback__comment"></textarea>
+				<button class="callback__button" id="callbackBtn">Жду звонка</button>
+			</div>
+			<!------------------------------------------------ Login ------------------------------------------------>
+
+			<div class="loginModal" id="loginModal">
+				<img class="callback__close" id="loginModal__close" src="src/img/delivery/close.svg" alt="close">
+				<h2 class="loginModal__head">ВОЙТИ</h2>
+				<input type="text" required placeholder="Login" class="loginModal__login" id="loginModal__login">
+				<input type="password" required placeholder="Password" class="loginModal__password" id="loginModal__password">
+				<button class="loginModal__button" id="login_button">ВОЙТИ</button>
+				<button class="loginModal__button" id="register_button">ЗАРЕГИСТРИРОВАТСЯ</button>
+				<div class="loginModal__error" id="error">
+					<p id="errMsg"></p>
+				</div>
+			</div>
+
+			<div id="successForm">
+				<div class="headForm">
+					<p class="status">Success!</p>
+				</div>
+				<div class="content">
+					<p class="msg" id="successMsg"></p>
+				</div>
+			</div>
+
+		</div>
+
+
 		<div class="container" id="container">
 			<!------------------------------------------------ HEADER ------------------------------------------------>
 			<header class="container__header header">
 				<div class="header__info info">
 					<!------------ Left Side ------------>
 					<div class="header__left-side left-side">
-						<div class="left-side__delivery delivery">
+						<div class="left-side__delivery delivery" id="delivery">
 							<img class="delivery__img" src="src/img/delivery.svg" width="56" height="56" alt="delivery">
 							<p class="delivery__info">Условия доставки</p>
 						</div>
-						<p class="left-side__language">UA</p>
-						<img class="left-side__search" src="src/img/search.svg" width="28" height="28" alt="search">
-					</div>
-					<!------------ Right Side ------------>
-					<div class="header__right-side right-side">
-						<div class="right-side__call call">
+						<div class="left-side__call call" id="call">
 							<img class="call__img" src="src/img/call.svg" width="28" height="28" alt="call">
 							<p class="call__phone">(044) 123-45-67</p>
 						</div>
-						<div class="right-side__login login">
+						<!--<p class="left-side__language">UA</p>
+						<img class="left-side__search" src="src/img/search.svg" width="28" height="28" alt="search">-->
+					</div>
+					<!------------ Right Side ------------>
+					<div class="header__right-side right-side">
+						<div class="right-side__login login" id="login">
 							<img class="login__img" src="src/img/login-man.png" alt="login">
 							<p class="login__login" >Войти</p>
 						</div>
@@ -55,7 +127,7 @@
 								</ul>
 							</li>
 							<li id="dish">
-								<a class="nav__link" >Блюда<img id="dishesArrow" width="12" height="12" src="src/img/arrow.svg" alt="arrow"></a>
+								<a class="nav__link">Блюда<img id="dishesArrow" width="12" height="12" src="src/img/arrow.svg" alt="arrow"></a>
 								<ul class="menu__dishes" id="menuDishes">
 									<li id="allDishes">Все блюда</li>
 									<li id="pizzas">Пицца</li>
@@ -72,29 +144,24 @@
 					</nav>
 
 			</header>
-			<!------------------------------------------------ Content ------------------------------------------------>
-			<div class="container__slider slider">
-				<div class="slider__item item isActiveImg">
-					<img class="item__img" src="src/img/slide1.jpg" alt="Первый слайд">
-					<div class="item__slideText">Заголовок слайда 1</div>
-				</div>
+			<!------------------------------------------------ Slider ------------------------------------------------>
 
+			<div class="container__slider slider">
+
+				<div class="slider__item item isActiveImg">
+					<img class="item__img" src="src/img/slide2.jpg" alt="Первый слайд">
+				</div>
 				<div class="slider__item item">
-					<img class="item__img" src="src/img/slide2.jpg" alt="Второй слайд">
-					<div class="item__slideText">Заголовок слайда 2</div>
+					<img class="item__img" src="src/img/slide1.jpg" alt="Второй слайд">
 				</div>
 				<div class="slider__item item">
 					<img class="item__img" src="src/img/slide3.jpg" alt="Второй слайд">
-					<div class="item__slideText">Заголовок слайда 2</div>
 				</div>
 				<div class="slider__item item">
 					<img class="item__img" src="src/img/slide4.jpg" alt="Второй слайд">
-					<div class="item__slideText">Заголовок слайда 2</div>
 				</div>
-
 				<div class="slider__item item">
 					<img class="item__img" src="src/img/slide5.jpg" alt="Третий слайд">
-					<div class="item__slideText">Заголовок слайда 3</div>
 				</div>
 
 				<!-----------Arrows----------->
@@ -108,15 +175,23 @@
 				</div>
 				<!-----------Dots----------->
 				<div class="dots" id="dotsBlock"></div>
-				<!----------- Dishes/Kitchens ----------->
+			</div>
+			<!-------------------------------------------- Dishes/Kitchens -------------------------------------------->
+
+			<div class="container__dishesKitchens" id="container__dishesKitchens">
+				<div class="dishesKitchens" id="dishesKitchens">
+
+				</div>
 			</div>
 
-			<div class="dishesKitchens" id="dishesKitchens"></div>
-			<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18515.883221845408!2d33.619987123653885
+			<div class="container__map" id="contacts">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18515.883221845408!2d33.619987123653885
 				!3d34.87691028131435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e09cd1f0091123%3A0xca7e01752
 				40362cc!2zzqDOrM-BzrrOvyDOpM61zrrOus6tLCDQmtGW0L_RgA!5e0!3m2!1suk!2sua!4v1579007988039!5m2!1suk!2sua"
-				width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
-			</iframe>-->
+						width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="">
+				</iframe>
+			</div>
+
 		</div>
 	</div>
 	</body>

@@ -1,12 +1,14 @@
-export default {
-    menuWorker : (currentMenu, anotherMenu, anotherMenuArrow, currentMenuArrow) => {
-        currentMenu.classList.toggle('isActive');
-        if(anotherMenu.classList.contains('isActive')){
-            anotherMenu.classList.toggle('isActive');
-            anotherMenuArrow.style.transform += 'rotate(180deg)';
-        }
-        currentMenuArrow.style.transform += 'rotate(180deg)';
-    },
+import model from "./model";
+import view from "./view";
+
+export const viewMenu = () => {
+    model.kitchenMenu.addEventListener("click", function (e) {
+        e.stopPropagation();
+        view.menuWorker(model.kitchensList, model.dishesList, model.dishesArrow, model.kitchenArrow)
+    });
+
+    model.dishesMenu.addEventListener("click", function (e) {
+        e.stopPropagation();
+        view.menuWorker(model.dishesList, model.kitchensList, model.kitchenArrow, model.dishesArrow)
+    });
 };
-
-

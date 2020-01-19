@@ -28,7 +28,8 @@ class View {
         dishPrice.innerText = `₴${price}`;
         dishButton.innerText = "Заказать";
 
-        const box = this.createBox({tag : "div", className: "thing",id : `thing__price${id}`, inner : [dishImg, dishName, dishPrice, dishButton]});
+        const box = this.createBox({tag : "div", className: "thing",id : `thing__price${id}`,
+                                    inner : [dishImg, dishName, dishPrice, dishButton]});
         const boxWrap = document.getElementById("dishesKitchens");
         boxWrap.append(box);
     }
@@ -40,14 +41,14 @@ class View {
     }
 
     clearDishContainer(){
+        const container = document.getElementById("container__dishesKitchens");
         const boxWrap = document.getElementById("dishesKitchens");
         boxWrap.remove();
-        const container = document.getElementById("container");
         const newBoxWrap = this.createBox({tag : "div", className: "dishesKitchens", id : "dishesKitchens"});
         container.append(newBoxWrap);
     }
 
-    drawList (dishesObj) {
+    drawList (dishesList) {
         const dishes = document.getElementsByClassName('menu__dishes');
         let instance = this;
         for (let i = 0; i < dishes.length; i++) {
@@ -57,21 +58,18 @@ class View {
                     let dishId = elem.getAttribute('id');
 
                     if(dishId === "allDishes"){
-                        for (let key in dishesObj) {
-                            if (dishesObj.hasOwnProperty(key)) {
-                                instance.drawDishes( dishesObj[key] );
+                        for (let key in dishesList) {
+                            if (dishesList.hasOwnProperty(key)) {
+                                instance.drawDishes( dishesList[key] );
                             }
                         }
 
                     }else{
-                        instance.drawDishes( dishesObj[dishId] );
+                        instance.drawDishes( dishesList[dishId] );
                     }
             })
         }
     }
-
-
-
 }
 
 export default View;

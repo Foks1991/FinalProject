@@ -1,0 +1,15 @@
+export default {
+    overlay : document.getElementById("overlay"),
+    modalWrap : document.getElementById("modal__wrap"),
+    loginForm : document.getElementById("loginModal"),
+    loginInput : document.getElementById("loginModal__login"),
+    passwordInput : document.getElementById("loginModal__password"),
+    loginBtn : document.getElementById("login_button"),
+    registerBtn : document.getElementById("register_button"),
+    errorDiv : document.getElementById("error"),
+    errorMsg : document.getElementById("errMsg"),
+    successForm : document.getElementById("successForm"),
+    callbackForm : document.getElementById("callback"),
+    callback : document.getElementById("callbackBtn"),
+    successMsg : document.getElementById("successMsg"),
+}

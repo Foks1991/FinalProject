@@ -9,18 +9,13 @@ class Controller{
         this.view = view;
     }
     init(){
-        /*this.model.addDishes(pizza, sushii, bbq, khachapurii);
-       for (let i = 0; i < this.model.getDishes().length; i++) {
-           this.view.drawDishes(this.model.getDishes()[i]);
-       }*/
-        const dishesObj = this.model.getDishesObj();
-        this.model.addDishToObj(dishesObj, "pizzas", JSON.parse(pizza));
-        this.model.addDishToObj(dishesObj, "sushi", JSON.parse(sushi));
-        this.model.addDishToObj(dishesObj, "barbecue", JSON.parse(barbecue));
-        this.model.addDishToObj(dishesObj, "khachapuri", JSON.parse(khachapuri));
-        console.log(dishesObj);
+        const dishesList = this.model.getDishes();
+        this.model.addDish(dishesList, "pizzas", JSON.parse(pizza));
+        this.model.addDish(dishesList, "sushi", JSON.parse(sushi));
+        this.model.addDish(dishesList, "barbecue", JSON.parse(barbecue));
+        this.model.addDish(dishesList, "khachapuri", JSON.parse(khachapuri));
 
-        this.view.drawList(dishesObj);
+        this.view.drawList(dishesList);
     }
 
 }

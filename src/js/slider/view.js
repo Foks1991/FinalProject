@@ -1,28 +1,46 @@
-import model from "./model";
-import controller from "./controller";
-
-export const viewSlider = () =>{
-
-    controller.createDots(model.slideArray.length, model.blockForDots);
-
-    controller.setCurrentDotStyle(controller.currentSlideIndex(model.slideArray), model.dotsArray);
-
-    model.leftSliderSide.addEventListener("click", function () {
-        controller.leftSlide(controller.currentSlideIndex(model.slideArray), model.slideArray, model.dotsArray);
-    });
-    model.rightSliderSide.addEventListener("click", function () {
-        controller.rightSlide(controller.currentSlideIndex(model.slideArray), model.slideArray, model.dotsArray);
-    });
-
-    const toggleSlides = (dotsArray, slideArray) => {
-        for (let i = 0; i < dotsArray.length; i++)  {
-            dotsArray[i].addEventListener('click', function () {
-                dotsArray[controller.currentSlideIndex(slideArray)].classList.toggle('isActiveDot');
-                controller.setCurrentDotStyle(i, dotsArray);
-                slideArray[controller.currentSlideIndex(slideArray)].classList.toggle('isActiveImg');
-                slideArray[i].classList.toggle('isActiveImg')
-            })
+export default {
+    currentSlideIndex : (arrBlocks) => {
+        for (let i = 0; i < arrBlocks.length; i++) {
+            if(arrBlocks[i].classList.contains('isActiveImg')){
+                return i;
+            }
         }
-    };
-    toggleSlides(model.dotsArray, model.slideArray);
+    },
+
+    leftSlide : (currentSlideIndex, sliderBlocks, dotsArray) => {
+        sliderBlocks[currentSlideIndex].classList.toggle('isActiveImg');
+        dotsArray[currentSlideIndex].classList.toggle('isActiveDot');
+        if(currentSlideIndex === 0){
+            sliderBlocks[sliderBlocks.length - 1].classList.toggle('isActiveImg');
+            dotsArray[sliderBlocks.length - 1].classList.toggle('isActiveDot');
+        }else{
+            sliderBlocks[currentSlideIndex-1].classList.toggle('isActiveImg');
+            dotsArray[currentSlideIndex-1].classList.toggle('isActiveDot');
+        }
+    },
+
+    rightSlide : (currentSlideIndex, sliderBlocks, dotsArray) => {
+        sliderBlocks[currentSlideIndex].classList.toggle('isActiveImg');
+        dotsArray[currentSlideIndex].classList.toggle('isActiveDot');
+        if(currentSlideIndex === sliderBlocks.length - 1){
+            sliderBlocks[0].classList.toggle('isActiveImg');
+            dotsArray[0].classList.toggle('isActiveDot');
+        }else{
+            sliderBlocks[currentSlideIndex+1].classList.toggle('isActiveImg');
+            dotsArray[currentSlideIndex+1].classList.toggle('isActiveDot');
+        }
+    },
+
+    createDots : (slidesQuantity, dotsBlock) => {
+        for (let i = 0; i < slidesQuantity; i++) {
+            const elem = document.createElement('span');
+            elem.setAttribute('class','dot');
+            dotsBlock.appendChild(elem);
+        }
+    },
+
+    setCurrentDotStyle : (currentDotIndex, dotsArray) => {
+        dotsArray[currentDotIndex].classList.add('isActiveDot');
+    },
+
 };

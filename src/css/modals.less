@@ -1,0 +1,162 @@
+@import "variables";
+//--------------------------------------Delivery--------------------------------------
+.overlay{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  opacity: 0.5;
+  z-index: 4;
+  display: none;
+}
+
+.modal__wrap{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  display: none;
+}
+
+.deliver{
+  .modalFormsMixin();
+  &__img{
+    width: 50px;
+    height: 30px;
+  }
+  &__min{
+    margin-top: 5px;
+  }
+  &__close{
+    .closeMixin();
+  }
+  &__list {
+    list-style-type: none;
+    margin-top: 20px;
+    text-align: center;
+    & a{
+      text-decoration: none;
+      outline: none;
+      border: none;
+    }
+    & li{
+      margin: 10px 0;
+    }
+  }
+}
+
+.helper{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+//--------------------------------------Callback--------------------------------------
+.callback{
+  .modalFormsMixin();
+  &__head{
+    margin-bottom: 10px;
+  }
+  &__name{
+    .inputMixin();
+  }
+  &__phone{
+    .inputMixin();
+  }
+  &__comment{
+    margin-top: 15px;
+    width: 250px;
+    height: 100px;
+    outline: 1px solid black;
+    resize: none;
+    padding: 10px;
+    font-size: 16px;
+  }
+  &__button{
+    margin-top: 20px;
+    .buttonMixin();
+    &:hover{
+      background-color: darkorange;
+    }
+    &:focus{
+      outline: none;
+      border: none;
+    }
+  }
+  &__close{
+    .closeMixin();
+  }
+}
+
+//--------------------------------------Login--------------------------------------
+.loginModal{
+  .modalFormsMixin();
+  justify-content: normal;
+  padding: 50px;
+  &__login{
+    .inputMixin();
+  }
+  &__password{
+    .inputMixin();
+    margin-bottom: 0;
+  }
+  &__button{
+    margin-top: 20px;
+    .buttonMixin();
+    &:hover{
+      background-color: darkorange;
+    }
+    &:focus{
+      outline: none;
+      border: none;
+    }
+  }
+  &__close{
+    .closeMixin();
+  }
+  &__error{
+    border: 1px solid black;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    background: rgba(210, 25, 62, 0.35);
+    font-weight: bold;
+    display: none;
+  }
+}
+
+#successForm{
+  width:300px;
+  border-radius:10px;
+  background-color: @white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+
+.headForm{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height:50px;
+  background-color:#1DD67D;
+  border-radius: 10px 10px 0 0;
+}
+
+.status{
+  color: @white;
+}
+
+.msg{
+  padding: 30px;
+  text-align: center;
+}
