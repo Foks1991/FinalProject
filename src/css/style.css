@@ -339,9 +339,6 @@
 .isActiveDot {
   background-color: #FFB231;
 }
-.container__map {
-  margin-top: 20px;
-}
 .overlay {
   height: 100%;
   width: 100%;
@@ -589,6 +586,59 @@
   padding: 30px;
   text-align: center;
 }
+.container__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.pagination {
+  width: 50vw;
+  height: 90vh;
+  flex-direction: column;
+  justify-content: space-around;
+  background: url("../img/menu.jpg");
+  background-size: cover;
+  position: relative;
+  display: none;
+}
+.pagination__head {
+  text-align: center;
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+  margin-top: 25px;
+}
+.pagination__records {
+  width: 100%;
+  padding: 0 30px;
+  position: absolute;
+  top: 40%;
+}
+.pagination__pages {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 15px;
+}
+.page {
+  color: darkblue;
+  margin: 0 3px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.record {
+  min-height: 50px;
+  outline: 2px solid lime;
+}
+.isActivePage {
+  color: red;
+}
 * {
   margin: 0;
   padding: 0;
@@ -608,5 +658,6 @@ body {
 .container {
   max-width: 100%;
   margin: 0 auto;
+  background: url("../img/back.png");
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="src/css/style.css">
 		<meta charset="UTF-8">
 		<title>Food delivery</title>
+		<link rel="shortcut icon" href="src/img/favicon.png" type="image/png">
 	</head>
 	
 	<body>
@@ -14,7 +15,7 @@
 		<div class="overlay" id="overlay"></div>
 		<!------------------------------------------------ Modals ------------------------------------------------>
 		<div class="modal__wrap" id="modal__wrap">
-			<!------------------------------------------------ Delivery ------------------------------------------------>
+			<!-------------------------------------------------- Delivery ------------------------------------------------>
 			<div class="deliver" id="deliver">
 				<img class="deliver__close" id="deliver__close" src="[object Module]" alt="close">
 				<h2 class="deliver__head">Условия доставки</h2>
@@ -127,7 +128,7 @@
 								</ul>
 							</li>
 							<li id="dish">
-								<a class="nav__link" >Блюда<img id="dishesArrow" width="12" height="12" src="[object Module]" alt="arrow"></a>
+								<a class="nav__link">Блюда<img id="dishesArrow" width="12" height="12" src="[object Module]" alt="arrow"></a>
 								<ul class="menu__dishes" id="menuDishes">
 									<li id="allDishes">Все блюда</li>
 									<li id="pizzas">Пицца</li>
@@ -136,8 +137,7 @@
 									<li id="khachapuri">Хачапури</li>
 								</ul>
 							</li>
-							<li><a class="nav__link" href="#setLunch">Комплексный обед</a></li>
-							<li><a class="nav__link" href="#daysMenu">Меню по дням</a></li>
+							<li><a class="nav__link" href="#pagination" id="menuByDays">Меню по дням</a></li>
 							<li><a class="nav__link" href="#contacts">Контакты</a></li>
 						</ul>
 						<!-----------Burger Menu----------->
@@ -184,6 +184,15 @@
 				</div>
 			</div>
 
+
+			<div class="container__pagination" id="container__pagination">
+				<div class="pagination" id="pagination">
+					<div class="pagination__head" id="paginationHeader"></div>
+					<div class="pagination__records" id="records"></div>
+					<div class="pagination__pages" id="pages"></div>
+				</div>
+			</div>
+
 			<div class="container__map" id="contacts">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18515.883221845408!2d33.619987123653885
 				!3d34.87691028131435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e09cd1f0091123%3A0xca7e01752
@@ -194,6 +203,7 @@
 
 		</div>
 	</div>
+
 	<script type="text/javascript" src="bundle.js"></script></body>
 
 	<script src="build/bundle.js"></script>
