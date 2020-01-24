@@ -1,6 +1,5 @@
 class Model {
     constructor(){
-        //this.dishes = [];
         this.dishesObj = {}
     }
 

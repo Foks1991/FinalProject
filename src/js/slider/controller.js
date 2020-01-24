@@ -4,7 +4,6 @@ import view from "./view";
 export const viewSlider = () =>{
 
     view.createDots(model.slideArray.length, model.blockForDots);
-
     view.setCurrentDotStyle(view.currentSlideIndex(model.slideArray), model.dotsArray);
 
     model.leftSliderSide.addEventListener("click", function () {
@@ -13,6 +12,7 @@ export const viewSlider = () =>{
     model.rightSliderSide.addEventListener("click", function () {
         view.rightSlide(view.currentSlideIndex(model.slideArray), model.slideArray, model.dotsArray);
     });
+
 
     const toggleSlides = (dotsArray, slideArray) => {
         for (let i = 0; i < dotsArray.length; i++)  {

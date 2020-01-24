@@ -3,8 +3,6 @@ const express = require ('express');
 const path = require('path');
 const app = express();
 const server = http.createServer(app);
-const bodyParser = require('body-parser');
-const jsonParser = bodyParser.json();
 
 server.listen(process.env.PORT || 5000, () => {
     console.log(`Server started on port ${server.address().port} :)`);
@@ -18,12 +16,5 @@ app.get('/', function(req, res) {
 });
 
 app.get('/menu', function(req, res) {
-    res.sendFile(path.join(__dirname, '/test.json'));
+    res.sendFile(path.join(__dirname, '/dishes.json'));
 });
-
-
-
-
-
-
-

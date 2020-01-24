@@ -1,5 +1,5 @@
 import view from "./view";
-import login from "./login";
+import login from "./loginController";
 
 export const viewModals = () =>{
 

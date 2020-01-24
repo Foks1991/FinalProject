@@ -19,10 +19,12 @@ class View {
     };
 
     dishConstructor(imgUrl, name, price, id){
+
         const dishImg = this.createBox({tag : "img", className: "thing__img", id : `thing__img${id}`});
         const dishName = this.createBox({tag : "p", className: "thing__name", id : `thing__name${id}`});
         const dishPrice = this.createBox({tag : "p", className: "thing__price", id : `thing__price${id}`});
         const dishButton = this.createBox({tag : "button", className: "thing__toBasket", id : `thing__price${id}`});
+
         dishImg.setAttribute("src", imgUrl);
         dishName.innerText = name;
         dishPrice.innerText = `₴${price}`;
@@ -63,7 +65,6 @@ class View {
                                 instance.drawDishes( dishesList[key] );
                             }
                         }
-
                     }else{
                         instance.drawDishes( dishesList[dishId] );
                     }

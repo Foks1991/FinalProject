@@ -9,15 +9,13 @@ class Controller{
         this.view = view;
     }
     init(){
-        const dishesList = this.model.getDishes();
-        this.model.addDish(dishesList, "pizzas", JSON.parse(pizza));
-        this.model.addDish(dishesList, "sushi", JSON.parse(sushi));
-        this.model.addDish(dishesList, "barbecue", JSON.parse(barbecue));
-        this.model.addDish(dishesList, "khachapuri", JSON.parse(khachapuri));
+        this.model.addDish(this.model.getDishes(), "pizzas", JSON.parse(pizza));
+        this.model.addDish(this.model.getDishes(), "sushi", JSON.parse(sushi));
+        this.model.addDish(this.model.getDishes(), "barbecue", JSON.parse(barbecue));
+        this.model.addDish(this.model.getDishes(), "khachapuri", JSON.parse(khachapuri));
 
-        this.view.drawList(dishesList);
+        this.view.drawList(this.model.getDishes());
     }
-
 }
 
 export default Controller;
