@@ -1,7 +1,7 @@
-import {pizza} from "./dishes/pizza.js";
-import {sushi} from "./dishes/sushi.js";
-import {barbecue} from "./dishes/barbecue.js";
-import {khachapuri} from "./dishes/khachapuri.js";
+import {pizza} from "./data/pizza.js";
+import {sushi} from "./data/sushi.js";
+import {barbecue} from "./data/barbecue.js";
+import {khachapuri} from "./data/khachapuri.js";
 
 class Controller{
     constructor(model, view){

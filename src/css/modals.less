@@ -19,12 +19,18 @@
 
 .deliver{
   .modalFormsMixin();
+  align-items: normal;
+  justify-content: normal;
+  &__head{
+    margin: 0 auto;
+  }
   &__img{
     width: 50px;
     height: 30px;
   }
   &__min{
     margin-top: 5px;
+
   }
   &__close{
     .closeMixin();
@@ -33,13 +39,14 @@
     list-style-type: none;
     margin-top: 20px;
     text-align: center;
+    display: flex;
     & a{
       text-decoration: none;
       outline: none;
       border: none;
     }
     & li{
-      margin: 10px 0;
+      margin: 5px;
     }
   }
 }
@@ -47,6 +54,7 @@
 .helper{
   display: flex;
   align-items: center;
+  justify-content: center;
   font-weight: bold;
   margin-top: 20px;
 }
@@ -159,4 +167,103 @@
 .msg{
   padding: 30px;
   text-align: center;
+}
+
+//-------------------------------------- Basket --------------------------------------
+
+
+.basket{
+  position: relative;
+}
+
+#overBasket{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.basket__list{
+  width: 200%;
+  padding: 15px;
+  position: absolute;
+  background-color: #fff;
+  z-index: 15;
+  top: 60px;
+  cursor: default;
+  margin-top: 5px;
+  display: none;
+}
+
+.order{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #C8C8C8;
+  padding: 5px;
+  margin: 3px 0;
+  &__name{
+    font-size: 13px;
+  }
+  &__price{
+    font-size: 13px;
+  }
+}
+
+.count{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__minus, &__plus{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  &__plus{
+    background: url("/src/img/add.svg");
+  }
+  &__minus{
+    background: url("/src/img/substract.svg");
+  }
+  &__count{
+    margin: 0 5px
+  }
+}
+
+.toOrd{
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px 0;
+  &__btn{
+    .buttonMixin();
+    width: 130px;
+    height: 35px;
+    border-radius: unset;
+    &:hover{
+      background-color: darkorange;
+    }
+    &:focus{
+      outline: none;
+      border: none;
+    }
+  }
+  &__sum{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 35px;
+    border: 1px solid @orange;
+  }
+}
+
+.clearOrder{
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.isOpenBasket{
+  display: block;
 }

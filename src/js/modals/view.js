@@ -13,48 +13,43 @@ export default {
         model.modalWrap.style.display = "none";
     },
     closeByOverlay() {
-        let instance = this;
-        model.overlay.addEventListener("click", function () {
-            instance.overlayOff();
-            const isOpenModal = document.getElementById(`${instance.isOpenModal}`);
+        model.overlay.addEventListener("click",  () => {
+            this.overlayOff();
+            const isOpenModal = document.getElementById(`${this.isOpenModal}`);
             isOpenModal.style.display = "none";
         });
     },
 
-    openModal(listenerId, modalId) {
+    openModal(listenerId, modalId, display) {
         const listener = document.getElementById(`${listenerId}`);
         const modal = document.getElementById(`${modalId}`);
-        let instance = this;
-        listener.addEventListener("click", function () {
-            instance.isOpenModal = modalId;
-            instance.overlayOn();
-            modal.style.display = "flex";
+        listener.addEventListener("click", () => {
+            this.isOpenModal = modalId;
+            this.overlayOn();
+            modal.style.display = display;
             dropdown.closeDDMenu();
         })
     },
     closeModal(listenerId, modalId) {
         const listener = document.getElementById(`${listenerId}`);
         const modal = document.getElementById(`${modalId}`);
-        let instance = this;
-        listener.addEventListener("click", function () {
-            instance.overlayOff();
+        listener.addEventListener("click", () => {
+            this.overlayOff();
             modal.style.display = "none";
         });
     },
-    successCallback(){
-        let instance = this;
+
+    successCallback() {
         model.successForm.style.display = "block";
         model.successMsg.innerText = "The operator will call you back within a minute";
         setTimeout(() => {
             model.successForm.style.display = "none";
-            instance.overlayOff();
-        }, 3000)
+            this.overlayOff();
+        }, 2500)
     },
-
-    callBack(){
-        let instance = this;
-        model.callback.addEventListener("click", function () {
-            instance.successCallback();
+    callBack() {
+        model.callbackBtn.addEventListener("click", () => {
+            this.successCallback();
             model.callbackForm.style.display = "none";
         })
     }

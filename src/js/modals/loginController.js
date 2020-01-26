@@ -28,36 +28,34 @@ export default {
         setTimeout(() => {
             model.successForm.style.display = "none";
             view.overlayOff();
-        }, 3000)
+        }, 2500)
     },
     registerUser() {
-        let instance = this;
-        model.registerBtn.addEventListener("click", function () {
+        model.registerBtn.addEventListener("click", () => {
             if (model.loginInput.value === "" || model.passwordInput.value === "") {
-                instance.errorMsg(model.emptyError);
+                this.errorMsg(model.emptyError);
                 return;
             }
-            if (!(instance.isUserInStorage(model.loginInput))) {
+            if (!(this.isUserInStorage(model.loginInput))) {
                 localStorage.setItem(model.loginInput.value, model.passwordInput.value);
-                instance.successForm(model.successRegister)
+                this.successForm(model.successRegister)
             } else {
-                instance.errorMsg(model.existsError);
+                this.errorMsg(model.existsError);
             }
-            instance.clearInputs();
+            this.clearInputs();
         })
     },
     loginUser() {
-        let instance = this;
-        model.loginBtn.addEventListener("click", function () {
+        model.loginBtn.addEventListener("click", () => {
             if (model.loginInput.value === "" || model.passwordInput.value === "") {
-                instance.errorMsg(model.emptyError);
+                this.errorMsg(model.emptyError);
                 return
             }
-            if (instance.isUserInStorage() && instance.checkPassword(instance.isUserInStorage()) === model.passwordInput.value) {
-                instance.successForm(model.successLogin)
-                instance.clearInputs();
+            if (this.isUserInStorage() && this.checkPassword(this.isUserInStorage()) === model.passwordInput.value) {
+                this.successForm(model.successLogin);
+                this.clearInputs();
             }else{
-                instance.errorMsg(model.incorrectError)
+                this.errorMsg(model.incorrectError)
             }
         })
     }

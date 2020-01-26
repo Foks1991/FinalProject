@@ -1,6 +1,7 @@
 const path = require("path");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssWebpackPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 const ENTRY_PATH =  path.resolve(__dirname, './src/js/init.js');
 const PUBLIC_PATH =  path.resolve( __dirname + "/build");
@@ -16,18 +17,53 @@ module.exports = {
         minimize: true,
     },
     module: {
-        rules: [
+        rules: [/*{
+            test: /\.html$/,
+            use: [
+                'file-loader?name=[name].[ext]',
+                'extract-loader',
+                {
+                    loader: 'html-loader',
+                    options: {
+                        attrs: ['img:src', 'link:href'],
+                    }
+                },
+            ],
+
+        },*/
             {test: /\.html$/, use: 'html-loader'},
-            {test: /\.less$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']},
-            {test: /\.(jpe?g|png|gif|svg)$/i,
+            {test: /\.less$/, use: [CssWebpackPlugin.loader, 'css-loader', 'less-loader']},
+            {test: /\.(jpe?g|png|gif|svg)$/,
                 use: [{
                     loader: "file-loader",
                     options: {
                         name: "[name].[ext]",
                         outputPath: './images',
+                        esModule: false,
                     },
                 }]
             },
+           /* {
+                test: /\.(svg|png|jpe?g|)$/i,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name(file) {
+                            return `${path.relative('src', file)}`
+                        }
+                    },
+                },
+            },*/
+            {
+                test: /\.(woff|eot|ttf)$/,
+                use: [{
+                    loader: require.resolve('url-loader'),
+                    options: {
+                        limit: 25000,
+                        name: 'fonts/[name].[ext]'
+                    }
+                }]
+            }
         ],
     },
     plugins: [
@@ -35,7 +71,7 @@ module.exports = {
             template: path.resolve(__dirname, './index.html'),
             filename: 'index.html'
         }),
-        new MiniCssExtractPlugin({
+        new CssWebpackPlugin({
             filename: 'style.css',
         })
     ],

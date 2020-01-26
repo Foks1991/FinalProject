@@ -122,6 +122,9 @@
 
 //Nav Menu
 @media (max-width: 768px) {
+  .info{
+    margin-bottom: 20px;
+  }
   .header__nav{
     padding: 5px;
   }
@@ -149,5 +152,18 @@
     & li:last-child{
       border-bottom: 1px solid orange;
     }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .delivery, .call, .login, .basket, .info{
+    height: auto;
+  }
+  .left-side, .right-side{
+    flex-wrap: wrap;
+  }
+  .right-side{
+    margin-top: 15px;
   }
 }

@@ -1,8 +1,9 @@
+import '../css/style.less'
+
 import {viewSlider} from './slider/controller'
 import {viewMenu} from './dropDown/controller'
 import {viewModals} from './modals/controller'
 import {viewPagination} from './pagination/controller'
-
 
 import Model from "./model";
 import Controller from "./controller";

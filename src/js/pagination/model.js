@@ -4,6 +4,7 @@ export default {
     daysOfWeek: [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" ],
     showMenuBtn : document.getElementById("menuByDays"),
     paginationHead: document.getElementById("paginationHeader"),
-    recordsPerPage: 5,
+    recordsPerPage: 4,
     paginationBlock : document.getElementById("pagination"),
+    currentPageIndex : undefined,
 }

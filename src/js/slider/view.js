@@ -7,30 +7,6 @@ export default {
         }
     },
 
-    leftSlide : (currentSlideIndex, sliderBlocks, dotsArray) => {
-        sliderBlocks[currentSlideIndex].classList.toggle('isActiveImg');
-        dotsArray[currentSlideIndex].classList.toggle('isActiveDot');
-        if(currentSlideIndex === 0){
-            sliderBlocks[sliderBlocks.length - 1].classList.toggle('isActiveImg');
-            dotsArray[sliderBlocks.length - 1].classList.toggle('isActiveDot');
-        }else{
-            sliderBlocks[currentSlideIndex-1].classList.toggle('isActiveImg');
-            dotsArray[currentSlideIndex-1].classList.toggle('isActiveDot');
-        }
-    },
-
-    rightSlide : (currentSlideIndex, sliderBlocks, dotsArray) => {
-        sliderBlocks[currentSlideIndex].classList.toggle('isActiveImg');
-        dotsArray[currentSlideIndex].classList.toggle('isActiveDot');
-        if(currentSlideIndex === sliderBlocks.length - 1){
-            sliderBlocks[0].classList.toggle('isActiveImg');
-            dotsArray[0].classList.toggle('isActiveDot');
-        }else{
-            sliderBlocks[currentSlideIndex+1].classList.toggle('isActiveImg');
-            dotsArray[currentSlideIndex+1].classList.toggle('isActiveDot');
-        }
-    },
-
     createDots : (slidesQuantity, dotsBlock) => {
         for (let i = 0; i < slidesQuantity; i++) {
             const elem = document.createElement('span');
@@ -41,6 +17,30 @@ export default {
 
     setCurrentDotStyle : (currentDotIndex, dotsArray) => {
         dotsArray[currentDotIndex].classList.add('isActiveDot');
+    },
+
+    leftSlide : (slideIndex, slide, dotsArray) => {
+        slide[slideIndex].classList.toggle('isActiveImg');
+        dotsArray[slideIndex].classList.toggle('isActiveDot');
+        if(!slideIndex){
+            slide[slide.length - 1].classList.toggle('isActiveImg');
+            dotsArray[slide.length - 1].classList.toggle('isActiveDot');
+        }else{
+            slide[slideIndex-1].classList.toggle('isActiveImg');
+            dotsArray[slideIndex-1].classList.toggle('isActiveDot');
+        }
+    },
+
+    rightSlide : (slideIndex, slide, dotsArray) => {
+        slide[slideIndex].classList.toggle('isActiveImg');
+        dotsArray[slideIndex].classList.toggle('isActiveDot');
+        if(slideIndex === slide.length - 1){
+            slide[0].classList.toggle('isActiveImg');
+            dotsArray[0].classList.toggle('isActiveDot');
+        }else{
+            slide[slideIndex+1].classList.toggle('isActiveImg');
+            dotsArray[slideIndex+1].classList.toggle('isActiveDot');
+        }
     },
 
 };

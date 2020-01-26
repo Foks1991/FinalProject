@@ -1,7 +1,7 @@
 export default {
-    leftSliderSide : document.getElementById("leftArrow"),
-    rightSliderSide : document.getElementById("rightArrow"),
+    dotsArray : document.getElementsByClassName('dot'),
     slideArray : document.getElementsByClassName('item'),
     blockForDots : document.getElementById('dotsBlock'),
-    dotsArray : document.getElementsByClassName('dot'),
+    leftSliderSide : document.getElementById("leftArrow"),
+    rightSliderSide : document.getElementById("rightArrow"),
 }

@@ -1,13 +1,13 @@
 export default {
     overlay : document.getElementById("overlay"),
     loginBtn : document.getElementById("login_button"),
-    errorModal : document.getElementById("error"),
-    callback : document.getElementById("callbackBtn"),
-    errorBlock : document.getElementById("errMsg"),
     modalWrap : document.getElementById("modal__wrap"),
     loginForm : document.getElementById("loginModal"),
     loginInput : document.getElementById("loginModal__login"),
     successMsg : document.getElementById("successMsg"),
+    errorModal : document.getElementById("error"),
+    errorBlock : document.getElementById("errMsg"),
+    callbackBtn : document.getElementById("callbackBtn"),
     registerBtn : document.getElementById("register_button"),
     successForm : document.getElementById("successForm"),
     callbackForm : document.getElementById("callback"),
@@ -15,7 +15,14 @@ export default {
 
     emptyError : "Field cannot be empty, please try again",
     existsError : "User with this login already exists",
+    successLogin : "Welcome",
     incorrectError : "Login or password does not match any account, please try again",
     successRegister : "Your account has been create successfully!",
-    successLogin : "Welcome",
+
+    overBasket : document.getElementById("overBasket"),
+    basketList : document.getElementById("basketList"),
+    orderWrap : document.getElementById("orderWrap"),
+    orderSum : document.getElementById("orderSum"),
+    clearOrder : document.getElementById("clearOrder"),
+    summaryPrice : undefined,
 }
