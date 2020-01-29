@@ -1,5 +1,5 @@
 import view from "./view";
-import login from "./loginController";
+import login from "./authorizationController";
 import basketController from "./basketController";
 
 export const viewModals = () =>{

@@ -1,170 +1,170 @@
 [
   {
-    "name": "Салат из овощей ",
+    "name": "Chicken wings",
     "price": "350",
-    "id": "25",
-    "day": "Понедельник"
+    "id": "20",
+    "url": "./src/img/bbq/chickenWings.jpg",
+    "type": "barbecue"
   },
   {
-    "name": "Cуп из фасоли и свинины.",
-    "price": "350",
-    "id": "26",
-    "day": "Понедельник"
+    "name": "Lula Kebab",
+    "price": "296",
+    "id": "21",
+    "url": "./src/img/bbq/LulaKebab.jpg",
+    "type": "barbecue"
   },
   {
-    "name": "Гречка, поджаренная курица.",
-    "price": "350",
-    "id": "27",
-    "day": "Понедельник"
+    "name": "BBQ skewers",
+    "price": "123",
+    "id": "22",
+    "url": "./src/img/bbq/BBQskewers.jpg",
+    "type": "barbecue"
   },
   {
-    "name": "Яблочный компот",
-    "price": "350",
-    "id": "28",
-    "day": "Понедельник"
+    "name": "Pork skewers",
+    "price": "233",
+    "id": "23",
+    "url": "./src/img/bbq/Porkskewers.jpg",
+    "type": "barbecue"
   },
   {
-    "name": "Салат: свежая капуста, морковь, заправленные растительным маслом и уксусом.",
+    "name": "Fillet",
     "price": "256",
-    "id": "29",
-    "day": "Вторник"
+    "id": "24",
+    "url": "./src/img/bbq/Fillet.jpg",
+    "type": "barbecue"
   },
   {
-    "name": "Cуп-лапша с курицей.",
-    "price": "256",
-    "id": "30",
-    "day": "Вторник"
+    "name": "Khachapuri in Imereti",
+    "price": "109",
+    "id": "14",
+    "url": "./src/img/khachapuri/imeteri.jpg",
+    "type": "khachapuri"
   },
   {
-    "name": "Макароны со сливочным маслом, котлета из говядины.",
-    "price": "256",
-    "id": "31",
-    "day": "Вторник"
+    "name": "Megrelian khachapuri",
+    "price": "119",
+    "id": "15",
+    "url": "./src/img/khachapuri/megreli.jpg",
+    "type": "khachapuri"
   },
   {
-    "name": "Компот из свежих ягод.",
-    "price": "256",
-    "id": "32",
-    "day": "Вторник"
+    "name": "Kubdari",
+    "price": "124",
+    "id": "16",
+    "url": "./src/img/khachapuri/kubdari.jpg",
+    "type": "khachapuri"
   },
   {
-    "name": "Салат с говядиной, фасолью и свежими овощами.",
-    "price": "256",
-    "id": "33",
-    "day": "Среда"
+    "name": "Khachapuri in Adjarian",
+    "price": "99",
+    "id": "17",
+    "url": "./src/img/khachapuri/adjari.jpg",
+    "type": "khachapuri"
   },
   {
-    "name": "Грибной суп-крем со сливками.",
-    "price": "256",
-    "id": "34",
-    "day": "Среда"
+    "name": "Khachapuri on the ridge ",
+    "price": "95",
+    "id": "18",
+    "url": "./src/img/khachapuri/rizna.jpg",
+    "type": "khachapuri"
   },
   {
-    "name": "Картофельное пюре и рулеты из курицы с сыром",
-    "price": "256",
-    "id": "35",
-    "day": "Среда"
+    "name": "Achma",
+    "price": "85",
+    "id": "19",
+    "url": "./src/img/khachapuri/achme.jpg",
+    "type": "khachapuri"
   },
   {
-    "name": "Мультифруктовый сок.",
-    "price": "256",
-    "id": "36",
-    "day": "Среда"
+    "name": "Catania",
+    "price": "215",
+    "id": "1",
+    "url": "./src/img/pizzas/Catania.png",
+    "type": "pizzas"
   },
   {
-    "name": "Салат: из кальмаров с консервированной кукурузой в майонезной заправке.",
-    "price": "256",
-    "id": "37",
-    "day": "Четверг"
+    "name": "Fiorenza",
+    "price": "195",
+    "id": "2",
+    "url": "./src/img/pizzas/florenza.png",
+    "type": "pizzas"
   },
   {
-    "name": "Гречневый суп с говядиной.",
-    "price": "256",
-    "id": "38",
-    "day": "Четверг"
+    "name": "Bavaria",
+    "price": "247",
+    "id": "3",
+    "url": "./src/img/pizzas/bavaria.png",
+    "type": "pizzas"
   },
   {
-    "name": "Кус-кус с кукурузой и сладким перцем и тилапия, обжаренная в сухарях.",
-    "price": "256",
-    "id": "39",
-    "day": "Четверг"
+    "name": "Basilicata",
+    "price": "155",
+    "id": "4",
+    "url": "./src/img/pizzas/basilicata.png",
+    "type": "pizzas"
   },
   {
-    "name": "Компот из сухофруктов.",
-    "price": "256",
-    "id": "40",
-    "day": "Четверг"
+    "name": "Campania",
+    "price": "205",
+    "id": "5",
+    "url": "./src/img/pizzas/campania.png",
+    "type": "pizzas"
   },
   {
-    "name": "Салат: «Оливье» с ветчиной.",
-    "price": "256",
-    "id": "41",
-    "day": "Пятница"
+    "name": "Margherita",
+    "price": "148",
+    "id": "6",
+    "url": "./src/img/pizzas/margaritta.png",
+    "type": "pizzas"
   },
   {
-    "name": "Холодный борщ с говядиной.",
-    "price": "256",
-    "id": "42",
-    "day": "Пятница"
+    "name": "Sea Max Set",
+    "price": "389",
+    "id": "7",
+    "url": "./src/img/sushi/seaMax.jpg",
+    "type": "sushi"
   },
   {
-    "name": "Картофельное пюре с куриными крокетами",
-    "price": "256",
-    "id": "43",
-    "day": "Пятница"
+    "name": "Philadelphia Set Max",
+    "price": "569",
+    "id": "8",
+    "url": "./src/img/sushi/philadelphia.jpg",
+    "type": "sushi"
   },
   {
-    "name": "Клюквенный морс.",
-    "price": "256",
-    "id": "44",
-    "day": "Пятница"
+    "name": "De Lux Set",
+    "price": "639",
+    "id": "9",
+    "url": "./src/img/sushi/deLux.jpg",
+    "type": "sushi"
   },
   {
-    "name": "Картофельное пюре с куриными крокетами",
-    "price": "256",
-    "id": "45",
-    "day": "Суббота"
+    "name": "Campai Set",
+    "price": "349",
+    "id": "10",
+    "url": "./src/img/sushi/campai.jpg",
+    "type": "sushi"
   },
   {
-    "name": "Макароны со сливочным маслом",
-    "price": "256",
-    "id": "46",
-    "day": "Суббота"
+    "name": "Sea Set Middle",
+    "price": "649",
+    "id": "11",
+    "url": "./src/img/sushi/seaSet.jpg",
+    "type": "sushi"
   },
   {
-    "name": "Гречка, поджаренная курица",
-    "price": "256",
-    "id": "47",
-    "day": "Суббота"
+    "name": "Philadelphia Set Middle",
+    "price": "479",
+    "id": "12",
+    "url": "./src/img/sushi/philaMiddle.jpg",
+    "type": "sushi"
   },
   {
-    "name": "Компот из сухофруктов.",
-    "price": "256",
-    "id": "48",
-    "day": "Суббота"
-  },
-  {
-    "name": "Картофельное пюре и рулеты из курицы с сыром",
-    "price": "256",
-    "id": "49",
-    "day": "Воскресенье"
-  },
-  {
-    "name": "Грибной суп-крем со сливками.",
-    "price": "256",
-    "id": "50",
-    "day": "Воскресенье"
-  },
-  {
-    "name": "Cуп-лапша с курицей.",
-    "price": "256",
-    "id": "51",
-    "day": "Воскресенье"
-  },
-  {
-    "name": "Гречка, поджаренная курица",
-    "price": "256",
-    "id": "52",
-    "day": "Воскресенье"
+    "name": "Salmon Mix Set",
+    "price": "349",
+    "id": "13",
+    "url": "./src/img/sushi/salmon.jpg",
+    "type": "sushi"
   }
 ]

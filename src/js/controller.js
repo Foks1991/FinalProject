@@ -1,20 +1,30 @@
-import {pizza} from "./data/pizza.js";
-import {sushi} from "./data/sushi.js";
-import {barbecue} from "./data/barbecue.js";
-import {khachapuri} from "./data/khachapuri.js";
-
 class Controller{
     constructor(model, view){
         this.model = model;
         this.view = view;
     }
     init(){
-        this.model.addDish(this.model.getDishes(), "pizzas", JSON.parse(pizza));
-        this.model.addDish(this.model.getDishes(), "sushi", JSON.parse(sushi));
-        this.model.addDish(this.model.getDishes(), "barbecue", JSON.parse(barbecue));
-        this.model.addDish(this.model.getDishes(), "khachapuri", JSON.parse(khachapuri));
+        const getDishesByKey = (arr, key) => {
+            return arr.filter( (e) => {
+                return e.type === key;
+            });
+        };
 
-        this.view.drawList(this.model.getDishes());
+        const getDishesFromServer = () => {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "/dishes", true);
+            xhr.send();
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    for (let i = 0; i < this.model.getDishesKeys().length; i++) {
+                        this.model.addDish(this.model.getDishes(), `${this.model.getDishesKeys()[i]}`, getDishesByKey(JSON.parse(xhr.response), `${this.model.getDishesKeys()[i]}`));
+                    }
+                    this.view.drawList(this.model.getDishes());
+                }
+            };
+        };
+
+        getDishesFromServer();
     }
 }
 

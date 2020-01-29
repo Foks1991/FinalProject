@@ -42,16 +42,16 @@
             </div>
             <p class="deliver__min">Заказывайте на сайте</p>
             <p class="deliver__min">Для заказа - обратитесь к оператору:</p>
-            <ul class="deliver__list">
+            <div class="deliver__list">
                 <div>
-                    <li><a href="tel:(044) 444 44 44">(044) 444-44-44</a></li>
-                    <li><a href="tel:(067) 444 44 44">(067) 444-44-44</a></li>
+                    <a href="tel:(044) 444 44 44">(044) 444-44-44</a>
+                    <a href="tel:(067) 444 44 44">(067) 444-44-44</a>
                 </div>
                 <div>
-                    <li><a href="tel:(099) 444 44 44">(099) 444-44-44</a></li>
-                    <li><a href="tel:(073) 444 44 44">(073) 444 44 44</a></li>
+                    <a href="tel:(099) 444 44 44">(099) 444-44-44</a>
+                    <a href="tel:(073) 444 44 44">(073) 444 44 44</a>
                 </div>
-            </ul>
+            </div>
         </div>
         <!------------------------------------------------ CallBack ------------------------------------------------>
         <div class="callback" id="callback">
@@ -63,7 +63,6 @@
             <button class="callback__button" id="callbackBtn">Жду звонка</button>
         </div>
         <!------------------------------------------------ Login ------------------------------------------------>
-
         <div class="loginModal" id="loginModal">
             <img class="callback__close" id="loginModal__close" src="src/img/delivery/close.svg" alt="close">
             <h2 class="loginModal__head">ВОЙТИ</h2>
@@ -168,7 +167,6 @@
 
         </header>
         <!------------------------------------------------ Slider ------------------------------------------------>
-
         <div class="container__slider slider">
 
             <div class="slider__item item isActiveImg">
@@ -190,24 +188,22 @@
             <!-----------Arrows----------->
             <div class="arrows">
                 <a class="arrows__left" id="leftArrow">
-                    <img class="arrows__left-left" src="src/img/right-arrow.svg">
+                    <img class="arrows__left-left" src="src/img/right-arrow.svg" alt="arrow">
                 </a>
                 <a class="arrows__right" id="rightArrow">
-                    <img class="arrows__right-right" src="src/img/right-arrow.svg">
+                    <img class="arrows__right-right" src="src/img/right-arrow.svg" alt="arrow">
                 </a>
             </div>
             <!-----------Dots----------->
             <div class="dots" id="dotsBlock"></div>
         </div>
         <!-------------------------------------------- Dishes/Kitchens -------------------------------------------->
-
         <div class="container__dishesKitchens" id="container__dishesKitchens">
             <div class="dishesKitchens" id="dishesKitchens">
 
             </div>
         </div>
-
-
+        <!-------------------------------------------- Pagination -------------------------------------------->
         <div class="container__pagination" id="container__pagination">
             <div class="pagination" id="pagination">
                 <div class="pagination__head" id="paginationHeader"></div>
@@ -215,13 +211,49 @@
                 <div class="pagination__pages" id="pages"></div>
             </div>
         </div>
-
+        <!-------------------------------------------- Contacts -------------------------------------------->
         <div class="container__map" id="contacts">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1882944000595!2d34.06792503955222!
 			3d34.9675451036038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dfc364786abd31%3A0xc9884a367baae2
 			d9!2zTmF0aW9uYWwgR3VhcmQgQ2FtcCwgQXlpYSBOYXBhLCDQmtC40L_RgA!5e0!3m2!1sru!2sua!4v1579897517674!5m2!1sru!2sua"
-					width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+					width="100%" height="450" style="border:0;" allowfullscreen=""></iframe>
         </div>
+        <!-------------------------------------------- Footer -------------------------------------------->
+        <footer class="container__footer footer">
+            <ul class="footer-icon">
+                <li class="footer-icon__item">
+                    <a href="https://twitter.com/?lang=uk" target="_blank" class="social_network">
+                        <img class="social_network__img" src="src/img/social/twitter.png" alt="social">
+                    </a>
+                </li>
+                <li class="footer-icon__item">
+                    <a href="https://www.youtube.com" target="_blank" class="social_network">
+                        <img class="social_network__img" src="src/img/social/youtube.png" alt="social">
+                    </a>
+                </li>
+                <li class="footer-icon__item">
+                    <a href="https://www.facebook.com" target="_blank" class="social_network">
+                        <img class="social_network__img" src="src/img/social/facebook.png" alt="social">
+                    </a>
+                </li>
+                <li class="footer-icon__item">
+                    <a href="https://vk.com" target="_blank" class="social_network">
+                        <img class="social_network__img" src="src/img/social/vk.png" alt="social">
+                    </a>
+                </li>
+                <li class="footer-icon__item">
+                    <a href="https://www.linkedin.com/" target="_blank" class="social_network">
+                        <img class="social_network__img" src="src/img/social/linkedin.png" alt="social">
+                    </a>
+                </li>
+                <li class="footer-icon__item">
+                    <a href="https://www.instagram.com/" target="_blank" class="social_network">
+                        <img class="social_network__img" src="src/img/social/instagram.png" alt="social">
+                    </a>
+                </li>
+            </ul>
+            <p class="footer__year">2020 ©</p>
+        </footer>
 
     </div>
 </div>

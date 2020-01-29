@@ -16,8 +16,6 @@ class View{
         return box;
     };
 
-
-
     dishConstructor(imgUrl, name, price, id){
 
         const dishImg = View.createElem({tag : "img", className: "thing__img", id : `thing__img${id}`});

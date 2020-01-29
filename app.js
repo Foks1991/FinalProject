@@ -16,5 +16,9 @@ app.get('/', function(req, res) {
 });
 
 app.get('/menu', function(req, res) {
+    res.sendFile(path.join(__dirname, '/src/js/data/menu.json'));
+});
+
+app.get('/dishes', function(req, res) {
     res.sendFile(path.join(__dirname, '/src/js/data/dishes.json'));
 });

@@ -19,10 +19,10 @@ export default {
     incorrectError : "Login or password does not match any account, please try again",
     successRegister : "Your account has been create successfully!",
 
+    orderSum : document.getElementById("orderSum"),
+    orderWrap : document.getElementById("orderWrap"),
+    clearOrder : document.getElementById("clearOrder"),
     overBasket : document.getElementById("overBasket"),
     basketList : document.getElementById("basketList"),
-    orderWrap : document.getElementById("orderWrap"),
-    orderSum : document.getElementById("orderSum"),
-    clearOrder : document.getElementById("clearOrder"),
     summaryPrice : undefined,
 }

@@ -1,6 +1,7 @@
 class Model {
     constructor(){
-        this.dishesObj = {}
+        this.dishesObj = {};
+        this.dishesKeys = ["pizzas", "sushi", "barbecue", "khachapuri"];
     }
 
     addDish(obj, key, value) {
@@ -8,6 +9,9 @@ class Model {
     }
     getDishes (){
         return this.dishesObj;
+    }
+    getDishesKeys (){
+        return this.dishesKeys;
     }
     clearDishes () {
         for (let key in this.dishesObj) {
