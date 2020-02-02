@@ -20,6 +20,7 @@ export default {
     successRegister : "Your account has been create successfully!",
 
     orderSum : document.getElementById("orderSum"),
+    orderBtn : document.getElementById("btnOrder"),
     orderWrap : document.getElementById("orderWrap"),
     clearOrder : document.getElementById("clearOrder"),
     overBasket : document.getElementById("overBasket"),

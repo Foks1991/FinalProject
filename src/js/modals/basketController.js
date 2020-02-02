@@ -1,5 +1,6 @@
 import mainView from "../view";
 import model from "./model"
+import view from "./view";
 
 export default {
     addToBasket(name, price){
@@ -7,11 +8,28 @@ export default {
         this.countPriceSum(price);
     },
 
+    order(){
+        model.orderBtn.addEventListener("click", () => {
+           this.successOrder();
+        });
+    },
+
+    successOrder() {
+        model.basketList.style.visibility = "hidden";
+        model.basketList.style.transform = "scale(0)";
+        model.successForm.style.display = "flex";
+        model.successMsg.innerText = "The operator will call you back within a minute";
+        setTimeout(() => {
+            model.successForm.style.display = "none";
+            view.overlayOff();
+        }, 2500)
+    },
+
      countPriceSum(price){
         model.orderSum.innerText = model.summaryPrice === undefined ? model.summaryPrice = price : model.summaryPrice += price;
      },
 
-    clearOrder1() {
+    clearOrder() {
         model.clearOrder.addEventListener("click", () => {
             const orderList = document.getElementsByClassName("order");
             for (let i = orderList.length - 1; i >= 0; i--) {
@@ -35,7 +53,7 @@ export default {
             let count = Number(elem.previousSibling.innerText);
             count+=1;
             elem.previousSibling.innerText = count;
-            elem.parentNode.nextSibling.innerText =  Number(elem.parentNode.nextSibling.textContent) + price;
+            elem.parentNode.nextSibling.innerText = Number(elem.parentNode.nextSibling.textContent) + price;
             model.orderSum.innerText = Number(model.orderSum.innerText) + price
         });
         countMinus.addEventListener('click', (e) => {
@@ -58,4 +76,6 @@ export default {
         const order = mainView.createElem({tag: "div", className: "order", inner : [orderName, orderCount, orderPrice]});
         model.orderWrap.append(order);
     },
+
+
 }

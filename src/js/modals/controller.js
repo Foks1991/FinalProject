@@ -4,10 +4,10 @@ import basketController from "./basketController";
 
 export const viewModals = () =>{
 
-    view.openModal("delivery", "deliver", "flex");
-    view.openModal("call", "callback", "flex");
-    view.openModal("login", "loginModal", "flex");
-    view.openModal("overBasket", "basketList", "block");
+    view.openModal("delivery", "deliver");
+    view.openModal("call", "callback");
+    view.openModal("login", "loginModal");
+    view.openModal("overBasket", "basketList");
 
     view.closeModal("deliver__close", "deliver");
     view.closeModal("callback__close", "callback");
@@ -18,6 +18,7 @@ export const viewModals = () =>{
 
     login.loginUser();
     login.registerUser();
-    basketController.clearOrder1();
 
+    basketController.clearOrder();
+    basketController.order();
 };

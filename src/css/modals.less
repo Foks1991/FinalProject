@@ -1,5 +1,6 @@
 @import "variables";
 //--------------------------------------Delivery--------------------------------------
+
 .overlay{
   height: 100%;
   width: 100%;
@@ -7,20 +8,23 @@
   position: absolute;
   opacity: 0.5;
   z-index: 4;
-  display: none;
+  display: flex;
+  visibility: hidden;
 }
 
 .modal__wrap{
   height: 100vh;
   width: 100%;
   position: absolute;
-  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  visibility: hidden;
 }
 
 .deliver{
   .modalFormsMixin();
-  align-items: normal;
-  justify-content: normal;
   &__head{
     margin: 0 auto;
   }
@@ -169,6 +173,9 @@
 
 //-------------------------------------- Basket --------------------------------------
 
+.basketHeader{
+  color: #e3405f;
+}
 
 .basket{
   position: relative;
@@ -181,16 +188,17 @@
 }
 
 .basket__list{
+  display: block;
   width: 200%;
   padding: 15px;
   position: absolute;
   background-color: #fff;
   z-index: 15;
   top: 60px;
-  right: 0px;
+  right: 0;
   cursor: default;
   margin-top: 5px;
-  display: none;
+  visibility: hidden;
 }
 
 .order{

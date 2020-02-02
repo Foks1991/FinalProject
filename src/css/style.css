@@ -182,15 +182,14 @@
   width: 320px;
   padding: 30px;
   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
   background-color: #ffffff;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 5;
-  display: none;
+  display: flex;
+  transform: scale(0);
+  transition: all 1s ease;
 }
 .buttonMixin {
   width: 220px;
@@ -223,8 +222,13 @@
   top: 15px;
   cursor: pointer;
 }
+.container__dishesKitchens {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .dishesKitchens {
-  margin-top: 5px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -247,8 +251,8 @@
 }
 .thing__img {
   margin-top: 20px;
-  width: 80%;
-  height: 300px;
+  width: 70%;
+  height: 250px;
   background-size: 100% 100%;
   border: none;
   transition: 0.5s;
@@ -290,7 +294,7 @@
   border: none;
 }
 .slider {
-  height: 600px;
+  flex-grow: 1;
   position: relative;
 }
 .arrows {
@@ -366,30 +370,32 @@
   position: absolute;
   opacity: 0.5;
   z-index: 4;
-  display: none;
+  display: flex;
+  visibility: hidden;
 }
 .modal__wrap {
   height: 100vh;
   width: 100%;
   position: absolute;
-  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  visibility: hidden;
 }
 .deliver {
   height: 450px;
   width: 320px;
   padding: 30px;
   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
   background-color: #ffffff;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 5;
-  display: none;
-  align-items: normal;
-  justify-content: normal;
+  display: flex;
+  transform: scale(0);
+  transition: all 1s ease;
 }
 .deliver__head {
   margin: 0 auto;
@@ -433,15 +439,14 @@
   width: 320px;
   padding: 30px;
   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
   background-color: #ffffff;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 5;
-  display: none;
+  display: flex;
+  transform: scale(0);
+  transition: all 1s ease;
 }
 .callback__head {
   margin-bottom: 10px;
@@ -508,15 +513,14 @@
   width: 320px;
   padding: 30px;
   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
   background-color: #ffffff;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 5;
-  display: none;
+  display: flex;
+  transform: scale(0);
+  transition: all 1s ease;
   justify-content: normal;
   padding: 50px;
 }
@@ -611,6 +615,9 @@
   padding: 30px;
   text-align: center;
 }
+.basketHeader {
+  color: #e3405f;
+}
 .basket {
   position: relative;
 }
@@ -620,16 +627,17 @@
   position: absolute;
 }
 .basket__list {
+  display: block;
   width: 200%;
   padding: 15px;
   position: absolute;
   background-color: #fff;
   z-index: 15;
   top: 60px;
-  right: 0px;
+  right: 0;
   cursor: default;
   margin-top: 5px;
-  display: none;
+  visibility: hidden;
 }
 .order {
   display: flex;
@@ -840,12 +848,48 @@
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
+.dropbtn {
+  padding: 5px 25px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  display: none;
+  margin-top: 20px;
+}
+.sortMenu {
+  margin: 0 auto;
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  z-index: 1;
+}
+.dropdown-content p {
+  color: black;
+  font-size: 12px;
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+.dropdown-content p:hover {
+  background-color: #0095FC;
+  color: white;
+}
+.isActiveSortMenu {
+  display: block;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", serif;
   color: #3e3e40;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   height: 100%;
@@ -860,5 +904,10 @@ body {
   max-width: 100%;
   margin: 0 auto;
   background: url("../img/back.png");
+}
+.container__main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

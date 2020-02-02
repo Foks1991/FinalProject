@@ -1,82 +1,5 @@
 [
   {
-    "name": "Chicken wings",
-    "price": "350",
-    "id": "20",
-    "url": "./src/img/bbq/chickenWings.jpg",
-    "type": "barbecue"
-  },
-  {
-    "name": "Lula Kebab",
-    "price": "296",
-    "id": "21",
-    "url": "./src/img/bbq/LulaKebab.jpg",
-    "type": "barbecue"
-  },
-  {
-    "name": "BBQ skewers",
-    "price": "123",
-    "id": "22",
-    "url": "./src/img/bbq/BBQskewers.jpg",
-    "type": "barbecue"
-  },
-  {
-    "name": "Pork skewers",
-    "price": "233",
-    "id": "23",
-    "url": "./src/img/bbq/Porkskewers.jpg",
-    "type": "barbecue"
-  },
-  {
-    "name": "Fillet",
-    "price": "256",
-    "id": "24",
-    "url": "./src/img/bbq/Fillet.jpg",
-    "type": "barbecue"
-  },
-  {
-    "name": "Khachapuri in Imereti",
-    "price": "109",
-    "id": "14",
-    "url": "./src/img/khachapuri/imeteri.jpg",
-    "type": "khachapuri"
-  },
-  {
-    "name": "Megrelian khachapuri",
-    "price": "119",
-    "id": "15",
-    "url": "./src/img/khachapuri/megreli.jpg",
-    "type": "khachapuri"
-  },
-  {
-    "name": "Kubdari",
-    "price": "124",
-    "id": "16",
-    "url": "./src/img/khachapuri/kubdari.jpg",
-    "type": "khachapuri"
-  },
-  {
-    "name": "Khachapuri in Adjarian",
-    "price": "99",
-    "id": "17",
-    "url": "./src/img/khachapuri/adjari.jpg",
-    "type": "khachapuri"
-  },
-  {
-    "name": "Khachapuri on the ridge ",
-    "price": "95",
-    "id": "18",
-    "url": "./src/img/khachapuri/rizna.jpg",
-    "type": "khachapuri"
-  },
-  {
-    "name": "Achma",
-    "price": "85",
-    "id": "19",
-    "url": "./src/img/khachapuri/achme.jpg",
-    "type": "khachapuri"
-  },
-  {
     "name": "Catania",
     "price": "215",
     "id": "1",
@@ -166,5 +89,82 @@
     "id": "13",
     "url": "./src/img/sushi/salmon.jpg",
     "type": "sushi"
+  },
+  {
+    "name": "Chicken wings",
+    "price": "350",
+    "id": "20",
+    "url": "./src/img/bbq/chickenWings.jpg",
+    "type": "barbecue"
+  },
+  {
+    "name": "Lula Kebab",
+    "price": "296",
+    "id": "21",
+    "url": "./src/img/bbq/LulaKebab.jpg",
+    "type": "barbecue"
+  },
+  {
+    "name": "BBQ skewers",
+    "price": "123",
+    "id": "22",
+    "url": "./src/img/bbq/BBQskewers.jpg",
+    "type": "barbecue"
+  },
+  {
+    "name": "Pork skewers",
+    "price": "233",
+    "id": "23",
+    "url": "./src/img/bbq/Porkskewers.jpg",
+    "type": "barbecue"
+  },
+  {
+    "name": "Fillet",
+    "price": "256",
+    "id": "24",
+    "url": "./src/img/bbq/Fillet.jpg",
+    "type": "barbecue"
+  },
+  {
+    "name": "Khachapuri in Imereti",
+    "price": "109",
+    "id": "14",
+    "url": "./src/img/khachapuri/imeteri.jpg",
+    "type": "khachapuri"
+  },
+  {
+    "name": "Megrelian khachapuri",
+    "price": "119",
+    "id": "15",
+    "url": "./src/img/khachapuri/megreli.jpg",
+    "type": "khachapuri"
+  },
+  {
+    "name": "Kubdari",
+    "price": "124",
+    "id": "16",
+    "url": "./src/img/khachapuri/kubdari.jpg",
+    "type": "khachapuri"
+  },
+  {
+    "name": "Khachapuri in Adjarian",
+    "price": "99",
+    "id": "17",
+    "url": "./src/img/khachapuri/adjari.jpg",
+    "type": "khachapuri"
+  },
+  {
+    "name": "Khachapuri on the ridge ",
+    "price": "95",
+    "id": "18",
+    "url": "./src/img/khachapuri/rizna.jpg",
+    "type": "khachapuri"
+  },
+  {
+    "name": "Achma",
+    "price": "85",
+    "id": "19",
+    "url": "./src/img/khachapuri/achme.jpg",
+    "type": "khachapuri"
   }
 ]

@@ -1,26 +1,14 @@
 class Model {
     constructor(){
-        this.dishesObj = {};
-        this.dishesKeys = ["pizzas", "sushi", "barbecue", "khachapuri"];
+        this.dishesArr = [];
+        this.filteredArr = [];
     }
 
-    addDish(obj, key, value) {
-        obj[key] = value;
-    }
-    getDishes (){
-        return this.dishesObj;
-    }
-    getDishesKeys (){
-        return this.dishesKeys;
-    }
-    clearDishes () {
-        for (let key in this.dishesObj) {
-            if (this.dishesObj.hasOwnProperty(key)) {
-                delete this.dishesObj[key]
-            }
-        }
-    }
+    getDishesArr (){return this.dishesArr}
+    getFilteredArr (){return this.filteredArr}
 
+    setDishesArr (dishes){this.dishesArr = dishes}
+    setFilteredArr (dishes){this.filteredArr = dishes}
 }
 
 export default Model;
