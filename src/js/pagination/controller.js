@@ -39,26 +39,19 @@ export const viewPagination = () => {
         }
     };
 
-    const getMenuFromServer = () => {
-        const xhr = new XMLHttpRequest();
-        xhr.open("GET", "/menu", true);
-        xhr.send();
-        xhr.onreadystatechange = function() {
-            if (this.readyState === 4 && this.status === 200) {
-                model.storage = JSON.parse(xhr.response);
-                view.drawPages(model.storage, getTodayDayIndex(), model.recordsPerPage);
-                view.drawPaginationHeader(model.paginationHead, getDayToday());
-                view.drawRecords(getRecordsByDay(model.storage, getDayToday()));
-                showRecords(model.pages);
-            }
-        };
-    };
-
-    model.showMenuBtn.addEventListener("click", function () {
+    const getMenuFromServer = async () => {
+        const response = await fetch('http://localhost:5000/menu');
+        model.storage = await response.json();
+        view.drawPages(model.storage, getTodayDayIndex(), model.recordsPerPage);
+        view.drawPaginationHeader(model.paginationHead, getDayToday());
+        view.drawRecords(getRecordsByDay(model.storage, getDayToday()));
+        showRecords(model.pages);
+    } ;
+    model.showMenuBtn.addEventListener("click",  () => {
         view.clearPages();
         view.clearContainer();
-        getMenuFromServer();
-        model.paginationBlock.style.display = "flex";
+        getMenuFromServer()
+            .then(() => model.paginationBlock.style.display = "flex");
     });
 
 };

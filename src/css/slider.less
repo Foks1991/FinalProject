@@ -1,8 +1,22 @@
 @import "variables";
 
 .slider{
+  margin-top: 20px;
   flex-grow: 1;
   position: relative;
+  &__item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 1.3s;
+  }
+  &__img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .arrows{
@@ -28,20 +42,6 @@
 }
 .arrows__right-right{
   transform:translate(0, -50%);
-}
-
-.item{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0;
-  transition: 1.3s;
-  &__img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 }
 
 .dots{

@@ -1,27 +1,24 @@
-class Controller{
-    constructor(model, view){
+class Controller {
+    constructor(model, view) {
         this.model = model;
         this.view = view;
     }
-    init(){
-        const getDishesFromServer = () => {
-            const xhr = new XMLHttpRequest();
-            xhr.open("GET", "/dishes", true);
-            xhr.send();
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    this.model.setDishesArr(JSON.parse(xhr.response));
-                    drawList(this.model.getDishesArr());
-                }
-            };
+
+    init() {
+        const getDishesFromServer = async () => {
+            fetch("http://localhost:5000/dishes")
+                .then(response => response.json())
+                .then(result => this.model.setStorage(result))
+                .then(() => drawList(this.model.getStorage()))
+                .catch(() => {console.log("Connection error")})
         };
 
         const getDishesByType = (arr, dishesType) => {
-            const filteredArray = arr.filter( (e) => {
+            const filteredArray = arr.filter((e) => {
                 return e.type === dishesType;
             });
-            this.model.setFilteredArr(filteredArray);
-            return this.model.getFilteredArr();
+            this.model.setFilteredStorage(filteredArray);
+            return this.model.getFilteredStorage();
         };
 
         const drawList = (dishesList) => {
@@ -33,32 +30,30 @@ class Controller{
                     let dishId = elem.getAttribute('id');
                     if (dishId === "allDishes") {
                         this.view.drawDishes(dishesList);
-                        this.model.setFilteredArr(this.model.getDishesArr());
+                        this.model.setFilteredStorage(this.model.getStorage());
                     } else {
                         this.view.drawDishes(getDishesByType(dishesList, dishId));
                     }
-                    const sortMenu = document.getElementById("dropbtn");
-                    sortMenu.style.display = 'block';
-                    const height = screen.height;
-                    window.scrollTo(0, height - 150);
+                    this.view.showSortBtn();
+                    this.view.scrollToDishes();
                 })
             }
         };
 
-        const sortDishes = (sortType, sortText) =>{
+        const sortDishes = (sortType, sortText) => {
             this.view.clearDishContainer();
             const sortMenu = document.getElementById("dropbtn");
             switch (sortType) {
                 case "priceSort":
-                    this.view.drawDishes(this.model.getFilteredArr().sort((a, b) => a.price - b.price));
+                    this.view.drawDishes(this.model.getFilteredStorage().sort((a, b) => a.price - b.price));
                     sortMenu.innerText = sortText;
                     break;
                 case "priceSortReverse":
-                    this.view.drawDishes(this.model.getFilteredArr().sort((a, b) => a.price - b.price).reverse());
+                    this.view.drawDishes(this.model.getFilteredStorage().sort((a, b) => a.price - b.price).reverse());
                     sortMenu.innerText = sortText;
                     break;
                 case "alphaSort":
-                    this.view.drawDishes(this.model.getFilteredArr().sort((a, b) => {
+                    this.view.drawDishes(this.model.getFilteredStorage().sort((a, b) => {
                         const nameA = a.name.toUpperCase();
                         const nameB = b.name.toUpperCase();
                         if (nameA < nameB) {return -1}
@@ -67,7 +62,7 @@ class Controller{
                     sortMenu.innerText = sortText;
                     break;
                 case "alphaSortReverse":
-                    this.view.drawDishes(this.model.getFilteredArr().sort((a, b) => {
+                    this.view.drawDishes(this.model.getFilteredStorage().sort((a, b) => {
                         const nameA = a.name.toUpperCase();
                         const nameB = b.name.toUpperCase();
                         if (nameA < nameB) {return -1}
@@ -89,10 +84,8 @@ class Controller{
             }
         };
 
-
-
         sortItemsListener();
-        getDishesFromServer();
+        getDishesFromServer().then(() => {});
         this.view.toggleSortMenu();
     }
 }

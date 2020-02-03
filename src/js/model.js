@@ -1,14 +1,14 @@
 class Model {
     constructor(){
-        this.dishesArr = [];
-        this.filteredArr = [];
+        this.storage = [];
+        this.filteredStorage = [];
     }
 
-    getDishesArr (){return this.dishesArr}
-    getFilteredArr (){return this.filteredArr}
+    getStorage (){return this.storage}
+    getFilteredStorage(){return this.filteredStorage}
 
-    setDishesArr (dishes){this.dishesArr = dishes}
-    setFilteredArr (dishes){this.filteredArr = dishes}
+    setStorage (dishes){this.storage = dishes}
+    setFilteredStorage (dishes){this.filteredStorage = dishes}
 }
 
 export default Model;

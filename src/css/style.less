@@ -1,19 +1,18 @@
-@import "header";
-@import "variables";
 @import "dish";
+@import "header";
 @import "slider";
-@import "map";
 @import "modals";
-@import "pagination";
 @import "footer";
 @import "sortMenu";
+@import "variables";
+@import "pagination";
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", serif;
-  color: #3e3e40;
+  color: @grey;
 }
 
 html{
@@ -27,7 +26,6 @@ body{
 .food-page-wrapper{
   width: 100%;
   height: 100%;
-  background-color: @lightgray;
   position: relative;
 }
 
@@ -39,6 +37,27 @@ body{
     display: flex;
     flex-direction: column;
     height: 100vh;
+  }
+  &__dishesKitchens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+  }
+  &__footer{
+    margin-top: 20px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
   }
 }
 

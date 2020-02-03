@@ -34,11 +34,11 @@ export default {
     },
 
     successForm(text) {
-        model.loginForm.style.visibility = "hidden";
-        model.loginForm.style.transform = "scale(0)";
-        model.errorModal.style.display = "none";
-        model.successForm.style.display = "block";
         model.successMsg.innerText = text;
+        model.errorModal.style.display = "none";
+        model.loginForm.style.transform = "scale(0)";
+        model.successForm.style.display = "block";
+        model.loginForm.style.visibility = "hidden";
         setTimeout(() => {
             model.successForm.style.display = "none";
             view.overlayOff();

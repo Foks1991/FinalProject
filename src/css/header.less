@@ -1,12 +1,11 @@
 @import "variables";
 
-.header{}
+/*---------------------Top Header---------------------*/
 .left-side, .right-side{
   margin: 0 auto;
 }
 
-/*---------------------Top Header---------------------*/
-.info{
+.header__info{
   min-height: 60px;
   padding: 0 20px;
   display: flex;
@@ -34,30 +33,24 @@
   margin-right: 10px;
 }
 
-.left-side__language{
-  margin:0 60px;
-  color: @orange;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.left-side__search{
-  cursor: pointer;
-}
-
 /*--------------------- Nav ---------------------*/
 
 .header__nav{
   position: relative;
   padding:20px;
   background-color: @grey;
-  margin:0 0 20px 0;
 }
-
 
 .nav{
   display: flex;
   justify-content: center;
+  &__link{
+    display: flex;
+    font-size: 16px;
+    color: @lightgray;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
   & li{
     list-style-type: none;
     padding:0 15px;
@@ -65,19 +58,8 @@
     &:last-child{
       border: none;
     }
-
   }
-  & a{
-    display: flex;
-    font-size: 16px;
-    color: @lightgray;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-}
 
-#menuKitchens{
-  transition: 5s;
 }
 
 .menu__kitchens, .menu__dishes{
@@ -94,8 +76,6 @@
     cursor: pointer;
     border-right: none;
     justify-content: left;
-    &:first-child{
-    }
     &:hover{
       background-color: rgba(158, 158, 163, 0.3);
     }
@@ -111,7 +91,7 @@
   margin:3px 0 0 5px;
 }
 
-.isActive{
+.isActiveMenu{
   display: flex;
 }
 
@@ -122,7 +102,7 @@
 
 //Nav Menu
 @media (max-width: 768px) {
-  .info{
+  .header__info{
     margin-bottom: 20px;
   }
   .header__nav{
@@ -154,7 +134,6 @@
     }
   }
 }
-
 
 @media (max-width: 480px) {
   .delivery, .call, .login, .basket, .info{

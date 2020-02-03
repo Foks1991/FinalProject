@@ -66,6 +66,14 @@ class View {
         const newBoxWrap = View.createElem({tag: "div", className: "dishesKitchens", id: "dishesKitchens"});
         container.append(newBoxWrap);
     }
+    showSortBtn() {
+        const sortMenu = document.getElementById("dropbtn");
+        sortMenu.style.display = 'block';
+    };
+    scrollToDishes() {
+        const height = screen.height;
+        window.scrollTo(0, height - 150);
+    };
 }
 
 export default View;

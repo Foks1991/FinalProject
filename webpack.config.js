@@ -17,20 +17,7 @@ module.exports = {
         minimize: true,
     },
     module: {
-        rules: [/*{
-            test: /\.html$/,
-            use: [
-                'file-loader?name=[name].[ext]',
-                'extract-loader',
-                {
-                    loader: 'html-loader',
-                    options: {
-                        attrs: ['img:src', 'link:href'],
-                    }
-                },
-            ],
-
-        },*/
+        rules: [
             {test: /\.html$/, use: 'html-loader'},
             {test: /\.less$/, use: [CssWebpackPlugin.loader, 'css-loader', 'less-loader']},
             {test: /\.(jpe?g|png|gif|svg)$/,
@@ -43,17 +30,6 @@ module.exports = {
                     },
                 }]
             },
-           /* {
-                test: /\.(svg|png|jpe?g|)$/i,
-                use: {
-                    loader: "file-loader",
-                    options: {
-                        name(file) {
-                            return `${path.relative('src', file)}`
-                        }
-                    },
-                },
-            },*/
             {
                 test: /\.(woff|eot|ttf)$/,
                 use: [{

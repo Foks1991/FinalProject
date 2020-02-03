@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-    <!--<link rel="stylesheet" href="static/css/style.css">-->  <!--For Node-->
     <link rel="stylesheet" href="src/css/style.css">
     <meta charset="UTF-8">
     <title>Food delivery</title>
@@ -87,61 +86,56 @@
 
     </div>
 
-
+    <!------------------------------------------------ Container ------------------------------------------------>
     <div class="container" id="container">
-        <!------------------------------------------------ HEADER ------------------------------------------------>
-        <div class="container__main main">
-            <header class="container__header header">
-                <div class="header__info info">
-                    <!------------ Left Side ------------>
+        <!------------------------------------------------ Header ------------------------------------------------>
+        <div class="container__main">
+            <header class="header">
+                <div class="header__info">
+                    <!-------------- Left Side -------------->
                     <div class="header__left-side left-side">
+                        <!-------- Delivery -------->
                         <div class="left-side__delivery delivery" id="delivery">
                             <img class="delivery__img" src="src/img/delivery.svg" width="56" height="56" alt="delivery">
                             <p class="delivery__info">Условия доставки</p>
                         </div>
+                        <!-------- Call -------->
                         <div class="left-side__call call" id="call">
                             <img class="call__img" src="src/img/call.svg" width="28" height="28" alt="call">
                             <p class="call__phone">(044) 123-45-67</p>
                         </div>
-                        <!--<p class="left-side__language">UA</p>
-                        <img class="left-side__search" src="src/img/search.svg" width="28" height="28" alt="search">-->
                     </div>
-                    <!------------ Right Side ------------>
+                    <!-------------- Right Side -------------->
                     <div class="header__right-side right-side">
+                        <!-------- Login -------->
                         <div class="right-side__login login" id="login">
                             <img class="login__img" src="src/img/login-man.png" alt="login">
                             <p class="login__login">Войти</p>
                         </div>
-
+                        <!-------- Basket -------->
                         <div class="right-side__basket basket">
                             <img class="basket__img" src="src/img/basket.svg" width="28" height="28" alt="basket">
                             <p class="basket__basket" id="basket">Корзина</p>
 
                             <div id="overBasket"></div>
                             <div class="basket__list" id="basketList">
-
                                 <div class="orderWrap" id="orderWrap"></div>
-
                                 <div class="toOrd">
                                     <button class="toOrd__btn" id="btnOrder">Заказать</button>
                                     <span class="toOrd__sum" id="orderSum"></span>
                                 </div>
-
                                 <div class="clearOrder" id="clearOrder">Очистить список</div>
                             </div>
-
                         </div>
                     </div>
                 </div>
                 <!------------ Nav ------------>
-
                 <nav class="header__nav">
                     <ul class="nav" id="menu">
                         <li id="kitchen">
                             <a class="nav__link">Кухня<img id="kitchenArrow" width="12" height="12"
-                                                           src="src/img/arrow.svg"
-                                                           alt="arrow"></a>
-                            <ul class="menu__kitchens animate" id="menuKitchens">
+                                                           src="src/img/arrow.svg" alt="arrow"></a>
+                            <ul class="menu__kitchens" id="menuKitchens">
                                 <li>Все Кухни</li>
                                 <li>Украинская кухня</li>
                                 <li>Итальянская кухня</li>
@@ -152,8 +146,7 @@
                         </li>
                         <li id="dish">
                             <a class="nav__link">Блюда<img id="dishesArrow" width="12" height="12"
-                                                           src="src/img/arrow.svg"
-                                                           alt="arrow"></a>
+                                                           src="src/img/arrow.svg" alt="arrow"></a>
                             <ul class="menu__dishes" id="menuDishes">
                                 <li id="allDishes">Все блюда</li>
                                 <li id="pizzas">Пицца</li>
@@ -164,28 +157,27 @@
                         </li>
                         <li><a class="nav__link" href="#pagination" id="menuByDays">Меню по дням</a></li>
                         <li><a class="nav__link" href="#contacts">Контакты</a></li>
+                        <li><a class="nav__link" href="#footer">Соц Сети</a></li>
                     </ul>
-                    <!-----------Burger Menu----------->
                 </nav>
-
             </header>
             <!------------------------------------------------ Slider ------------------------------------------------>
-            <div class="container__slider slider">
+            <div class="slider">
 
-                <div class="slider__item item isActiveImg">
-                    <img class="item__img" src="src/img/slider/slide3.jpg" alt="Первый слайд">
+                <div class="slider__item isActiveImg">
+                    <img class="slider__img" src="src/img/slider/slide3.jpg" alt="Первый слайд">
                 </div>
-                <div class="slider__item item">
-                    <img class="item__img" src="src/img/slider/slide1.jpg" alt="Второй слайд">
+                <div class="slider__item">
+                    <img class="slider__img" src="src/img/slider/slide1.jpg" alt="Второй слайд">
                 </div>
-                <div class="slider__item item">
-                    <img class="item__img" src="src/img/slider/slide2.jpg" alt="Второй слайд">
+                <div class="slider__item">
+                    <img class="slider__img" src="src/img/slider/slide2.jpg" alt="Второй слайд">
                 </div>
-                <div class="slider__item item">
-                    <img class="item__img" src="src/img/slider/slide4.jpg" alt="Второй слайд">
+                <div class="slider__item">
+                    <img class="slider__img" src="src/img/slider/slide4.jpg" alt="Второй слайд">
                 </div>
-                <div class="slider__item item">
-                    <img class="item__img" src="src/img/slider/slide5.jpg" alt="Третий слайд">
+                <div class="slider__item">
+                    <img class="slider__img" src="src/img/slider/slide5.jpg" alt="Третий слайд">
                 </div>
 
                 <!-----------Arrows----------->
@@ -227,51 +219,50 @@
         <!-------------------------------------------- Contacts -------------------------------------------->
         <div class="container__map" id="contacts">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1882944000595!2d34.06792503955222!
-			3d34.9675451036038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dfc364786abd31%3A0xc9884a367baae2
-			d9!2zTmF0aW9uYWwgR3VhcmQgQ2FtcCwgQXlpYSBOYXBhLCDQmtC40L_RgA!5e0!3m2!1sru!2sua!4v1579897517674!5m2!1sru!2sua"
-                    width="100%" height="450" style="border:0;" allowfullscreen=""></iframe>
+			    3d34.9675451036038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dfc364786abd31%3A0xc9884a367baae2
+			    d9!2zTmF0aW9uYWwgR3VhcmQgQ2FtcCwgQXlpYSBOYXBhLCDQmtC40L_RgA!5e0!3m2!1sru!2sua!4v1579897517674!5m2!1sru!2sua"
+                    width="100%" height="450" style="border:0;" allowfullscreen="">
+            </iframe>
         </div>
         <!-------------------------------------------- Footer -------------------------------------------->
-        <footer class="container__footer footer">
-            <ul class="footer-icon">
-                <li class="footer-icon__item">
-                    <a href="https://twitter.com/?lang=uk" target="_blank" class="social_network">
-                        <img class="social_network__img" src="src/img/social/twitter.png" alt="social">
+        <footer class="container__footer" id="footer">
+            <ul class="footer-icons-list">
+                <li class="footer-icons-list__item">
+                    <a href="https://twitter.com/?lang=uk" target="_blank" class="social-network-link">
+                        <img class="social-network-link__img" src="src/img/social/twitter.png" alt="social">
                     </a>
                 </li>
-                <li class="footer-icon__item">
-                    <a href="https://www.youtube.com" target="_blank" class="social_network">
-                        <img class="social_network__img" src="src/img/social/youtube.png" alt="social">
+                <li class="footer-icons-list__item">
+                    <a href="https://www.youtube.com" target="_blank" class="social-network-link">
+                        <img class="social-network-link__img" src="src/img/social/youtube.png" alt="social">
                     </a>
                 </li>
-                <li class="footer-icon__item">
-                    <a href="https://www.facebook.com" target="_blank" class="social_network">
-                        <img class="social_network__img" src="src/img/social/facebook.png" alt="social">
+                <li class="footer-icons-list__item">
+                    <a href="https://www.facebook.com" target="_blank" class="social-network-link">
+                        <img class="social-network-link__img" src="src/img/social/facebook.png" alt="social">
                     </a>
                 </li>
-                <li class="footer-icon__item">
-                    <a href="https://vk.com" target="_blank" class="social_network">
-                        <img class="social_network__img" src="src/img/social/vk.png" alt="social">
+                <li class="footer-icons-list__item">
+                    <a href="https://vk.com" target="_blank" class="social-network-link">
+                        <img class="social-network-link__img" src="src/img/social/vk.png" alt="social">
                     </a>
                 </li>
-                <li class="footer-icon__item">
-                    <a href="https://www.linkedin.com/" target="_blank" class="social_network">
-                        <img class="social_network__img" src="src/img/social/linkedin.png" alt="social">
+                <li class="footer-icons-list__item">
+                    <a href="https://www.linkedin.com/" target="_blank" class="social-network-link">
+                        <img class="social-network-link__img" src="src/img/social/linkedin.png" alt="social">
                     </a>
                 </li>
-                <li class="footer-icon__item">
+                <li class="footer-icons-list__item">
                     <a href="https://www.instagram.com/" target="_blank" class="social_network">
-                        <img class="social_network__img" src="src/img/social/instagram.png" alt="social">
+                        <img class="social-network-link__img" src="src/img/social/instagram.png" alt="social">
                     </a>
                 </li>
             </ul>
-            <p class="footer__year">2020 ©</p>
+            <p class="footer-year">2020 ©</p>
         </footer>
 
     </div>
 </div>
-
-</body>
-
 <script src="build/bundle.js"></script>
+</body>
 </html>
